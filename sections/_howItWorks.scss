@@ -1,0 +1,347 @@
+/* =========================================
+   04 / HOW IT WORKS
+========================================= */
+
+#how-it-works {
+  width: 100%;
+  background: #f7f7f5;
+  color: #002f49;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.how-container {
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  padding: 4vw 3rem;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.how-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 4rem;
+}
+
+.how-label {
+  margin: 0 0 2.5rem;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  span {
+    color: #780001;
+  }
+}
+
+.how-header h2 {
+  margin: 0;
+
+  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  font-weight: 500;
+  line-height: 0.83;
+  letter-spacing: -0.07em;
+}
+
+.how-header h2 span {
+  color: #c01221;
+}
+
+.how-intro {
+  width: 20rem;
+
+  margin: 0 0 0.5rem;
+
+  font-size: 1.2rem;
+  line-height: 1.45;
+
+  color: rgba(0, 47, 73, 0.7);
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border: 1px solid rgba(0, 47, 73, 0.18);
+  border-radius: 18px;
+
+  overflow: hidden;
+}
+
+.how-card {
+  min-height: 310px;
+
+  padding: 1.7rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f7f7f5;
+
+  border-right: 1px solid rgba(0, 47, 73, 0.18);
+  border-bottom: 1px solid rgba(0, 47, 73, 0.18);
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Remove right border */
+
+.how-card:nth-child(2n) {
+  border-right: none;
+}
+
+/* Remove bottom border */
+
+.how-card:nth-child(3),
+.how-card:nth-child(4) {
+  border-bottom: none;
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.how-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.how-card-top > span:first-child {
+  color: #c01221;
+}
+
+.how-card-label {
+  color: #780001;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.how-card-content {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.how-card-content h3 {
+  max-width: 430px;
+
+  margin: 0 0 0.8rem;
+
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.how-card-content p {
+  max-width: 400px;
+
+  margin: 0;
+
+  font-size: 1.1rem;
+  line-height: 1.45;
+
+  color: rgba(0, 47, 73, 0.62);
+}
+
+/* =========================================
+   TAGS
+========================================= */
+
+.how-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.how-tags span {
+  padding: 0.45rem 0.7rem;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+  border-radius: 100px;
+
+  font-size: 0.85rem;
+
+  color: rgba(0, 47, 73, 0.75);
+}
+
+/* =========================================
+   DECISION CARD
+========================================= */
+
+.how-card-decision {
+  background: #002f49;
+  color: #fef0d5;
+}
+
+.how-card-decision .how-card-label,
+.how-card-decision .how-card-top > span:first-child {
+  color: #c01221;
+}
+
+.how-card-decision .how-card-content p {
+  color: rgba(254, 240, 213, 0.65);
+}
+
+.how-card-decision .how-tags span {
+  border-color: rgba(254, 240, 213, 0.25);
+  color: rgba(254, 240, 213, 0.8);
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.how-card:not(.how-card-decision):hover {
+  background: #fef0d5;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .how-container {
+    padding: 6rem 5vw 4rem;
+  }
+
+  .how-header {
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .how-intro {
+    width: 240px;
+  }
+
+  .how-card {
+    min-height: 290px;
+  }
+
+  .how-connection {
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .how-connection > p {
+    max-width: 220px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .how-container {
+    padding: 2rem;
+  }
+
+  /* Header */
+
+  .how-header {
+    display: block;
+    margin-bottom: 3.5rem;
+  }
+
+  .how-label {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .how-header h2 {
+    font-size: clamp(3rem, 15vw, 6rem);
+  }
+
+  .how-intro {
+    width: 100%;
+    margin-top: 2rem;
+
+    font-size: 0.9rem;
+  }
+
+  /* Grid */
+
+  .how-grid {
+    grid-template-columns: 1fr;
+
+    border-radius: 14px;
+  }
+
+  .how-card {
+    min-height: 270px;
+
+    padding: 1.4rem;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 47, 73, 0.18);
+  }
+
+  .how-card:nth-child(3) {
+    border-bottom: 1px solid rgba(0, 47, 73, 0.18);
+  }
+
+  .how-card:last-child {
+    border-bottom: none;
+  }
+
+  /* Card */
+
+  .how-card-top {
+    font-size: 0.8rem;
+  }
+
+  .how-card-content {
+    margin-top: 1rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .how-card-content h3 {
+    font-size: 1.7rem;
+  }
+
+  .how-card-content p {
+    font-size: 0.82rem;
+  }
+
+  /* Connection */
+
+  .how-connection {
+    display: block;
+
+    padding-top: 1.5rem;
+  }
+
+  .connection-left {
+    display: block;
+  }
+
+  .connection-tags {
+    margin-top: 0.6rem;
+  }
+
+  .how-connection > p {
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+  }
+}

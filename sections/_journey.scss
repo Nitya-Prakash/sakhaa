@@ -1,0 +1,618 @@
+/* =========================================
+   05 / JOURNEY
+========================================= */
+
+#journey {
+  width: 100%;
+  background: #002f49;
+  color: #fef0d5;
+  overflow: hidden;
+  padding: 4rem 3rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.journey-container {
+  width: min(100%, 100rem);
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.journey-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 4rem;
+}
+
+.journey-label {
+  margin: 0 0 2.5rem;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  color: #c01221;
+}
+
+.journey-header h2 {
+  margin: 0;
+
+  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.journey-header h2 span {
+  color: #c01221;
+}
+
+.journey-intro {
+  width: 280px;
+
+  margin: 0 0 0.5rem;
+
+  font-size: 1.2rem;
+  line-height: 1.45;
+
+  color: rgba(254, 240, 213, 0.65);
+}
+
+/* =========================================
+   SWIPER
+========================================= */
+
+.journey-swiper {
+  width: 70%;
+
+  overflow: visible !important;
+}
+
+.journey-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* =========================================
+   SLIDE
+========================================= */
+
+.journey-slide {
+  width: 52%;
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+
+  background: #fef0d5;
+  color: #002f49;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.journey-image {
+  height: 450px;
+  overflow: hidden;
+}
+
+.journey-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey-slide:hover .journey-image img {
+  transform: scale(1.035);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.journey-content {
+  min-height: 300px;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  line-height: 1.5rem;
+}
+
+.journey-meta {
+  display: flex;
+  gap: 0.5rem;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.journey-meta span:first-child {
+  color: #c01221;
+}
+
+.journey-meta span:last-child {
+  color: #780001;
+}
+
+.journey-content h3 {
+  max-width: 70%;
+
+  // margin: auto 0 rem;
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+
+.journey-content .journey-text > p {
+  max-width: 80%;
+
+  margin-top: 1rem;
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.journey-highlight {
+  margin-top: 2rem;
+  padding-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.18);
+}
+
+.journey-highlight strong {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  color: #780001;
+}
+
+.journey-highlight span {
+  padding: 0.35rem 0.55rem;
+
+  background: #c01221;
+  color: #fef0d5;
+
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.journey-controls {
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Progress */
+
+.journey-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+
+  color: rgba(254, 240, 213, 0.45);
+}
+
+.journey-current {
+  color: #fef0d5;
+}
+
+.journey-progress-line {
+  width: 100px;
+  height: 2px;
+
+  background: rgba(254, 240, 213, 0.25);
+}
+
+/* Arrows */
+
+.journey-arrows {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.journey-arrows button {
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid rgba(254, 240, 213, 0.3);
+  border-radius: 50%;
+
+  background: transparent;
+  color: #fef0d5;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.journey-arrows button:hover {
+  background: #fef0d5;
+  color: #002f49;
+  border-color: #fef0d5;
+}
+
+.journey-arrows button.swiper-button-disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  /*
+    IMPORTANT:
+    #journey already has horizontal padding.
+    Do not add another padding layer here.
+  */
+
+  .journey-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .journey-header {
+    align-items: flex-start;
+    gap: 3rem;
+
+    margin-bottom: 3.5rem;
+  }
+
+  .journey-intro {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  .journey-swiper {
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  .journey-slide {
+    width: 88%;
+
+    grid-template-columns: 1fr;
+  }
+
+  .journey-image {
+    height: 420px;
+  }
+
+  .journey-content {
+    min-height: 300px;
+
+    padding: 2rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  /*
+    #journey itself controls the 2rem
+    outer spacing on mobile.
+  */
+
+  #journey {
+    padding: 2rem;
+  }
+
+  .journey-container {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  /* =====================================
+     HEADER
+  ===================================== */
+
+  .journey-header {
+    display: block;
+
+    margin-bottom: 3rem;
+  }
+
+  .journey-label {
+    margin-bottom: 2rem;
+
+    font-size: 0.75rem;
+  }
+
+  .journey-header h2 {
+    font-size: clamp(3.8rem, 18vw, 6rem);
+
+    line-height: 0.84;
+  }
+
+  .journey-intro {
+    width: 100%;
+    max-width: 25rem;
+
+    margin-top: 2rem;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* =====================================
+     SLIDER
+  ===================================== */
+
+  .journey-swiper {
+    width: 100%;
+
+    overflow: visible !important;
+  }
+
+  .journey-slide {
+    /*
+      Leave enough room to reveal part
+      of the next card.
+    */
+    width: 88%;
+
+    grid-template-columns: 1fr;
+
+    border-radius: 16px;
+  }
+
+  /* =====================================
+     IMAGE
+  ===================================== */
+
+  .journey-image {
+    width: 100%;
+    height: 280px;
+  }
+
+  /* =====================================
+     CONTENT
+  ===================================== */
+
+  .journey-content {
+    min-height: 320px;
+
+    padding: 1.4rem;
+
+    gap: 1.3rem;
+
+    line-height: 1.4;
+  }
+
+  .journey-meta {
+    font-size: 0.75rem;
+  }
+
+  .journey-content h3 {
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: clamp(2rem, 9vw, 2.8rem);
+
+    line-height: 0.92;
+  }
+
+  .journey-content .journey-text > p {
+    max-width: 100%;
+
+    margin-top: 0.8rem;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+  }
+
+  /* =====================================
+     HIGHLIGHT
+  ===================================== */
+
+  .journey-highlight {
+    margin-top: 1.2rem;
+
+    padding-top: 0.8rem;
+
+    gap: 0.6rem;
+  }
+
+  .journey-highlight strong {
+    font-size: 0.75rem;
+  }
+
+  /* =====================================
+     CONTROLS
+  ===================================== */
+
+  .journey-controls {
+    margin-top: 1.5rem;
+  }
+
+  .journey-progress {
+    font-size: 0.75rem;
+  }
+
+  .journey-progress-line {
+    width: 60px;
+  }
+
+  .journey-arrows {
+    gap: 0.4rem;
+  }
+
+  .journey-arrows button {
+    width: 42px;
+    height: 42px;
+
+    border-width: 1px;
+
+    i {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  /*
+    Keep exactly 2rem around the entire section.
+  */
+
+  #journey {
+    padding: 2rem;
+  }
+
+  .journey-container {
+    padding: 0;
+  }
+
+  /* Header */
+
+  .journey-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .journey-label {
+    margin-bottom: 1.7rem;
+
+    font-size: 0.7rem;
+  }
+
+  .journey-header h2 {
+    font-size: clamp(3.4rem, 18vw, 5rem);
+  }
+
+  .journey-intro {
+    margin-top: 1.7rem;
+
+    font-size: 0.85rem;
+  }
+
+  /* Slider */
+
+  .journey-slide {
+    /*
+      Slightly narrower so the next slide
+      remains visible.
+    */
+    width: 88%;
+
+    border-radius: 14px;
+  }
+
+  .journey-image {
+    height: 240px;
+  }
+
+  /* Content */
+
+  .journey-content {
+    min-height: 300px;
+
+    padding: 1.2rem;
+
+    gap: 1.1rem;
+  }
+
+  .journey-meta {
+    font-size: 0.68rem;
+  }
+
+  .journey-content h3 {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .journey-content .journey-text > p {
+    font-size: 0.82rem;
+  }
+
+  /* Highlight */
+
+  .journey-highlight {
+    margin-top: 0.8rem;
+  }
+
+  .journey-highlight strong {
+    font-size: 0.68rem;
+  }
+
+  .journey-highlight span {
+    padding: 0.3rem 0.45rem;
+
+    font-size: 0.55rem;
+  }
+
+  /* Controls */
+
+  .journey-controls {
+    margin-top: 1.2rem;
+  }
+
+  .journey-progress-line {
+    width: 50px;
+  }
+
+  .journey-arrows button {
+    width: 38px;
+    height: 38px;
+  }
+}

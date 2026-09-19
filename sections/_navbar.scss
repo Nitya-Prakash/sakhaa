@@ -1,0 +1,453 @@
+// =====================================
+// NAVBAR
+// =====================================
+
+#navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: 5.5rem;
+
+  padding: 0 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+
+  transition:
+    background-color 0.35s ease,
+    backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+// =====================================
+// LOGO
+// =====================================
+
+#logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  img {
+    display: block;
+
+    width: 9rem;
+    height: auto;
+  }
+}
+
+// =====================================
+// DESKTOP NAVIGATION
+// =====================================
+
+#nav {
+  display: flex;
+  align-items: center;
+
+  gap: 3rem;
+
+  a {
+    position: relative;
+
+    color: #002f49;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      bottom: -0.4rem;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: #c01221;
+
+      transform: scaleX(0);
+      transform-origin: right;
+
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: #780001;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+// =====================================
+// CONTACT BUTTON
+// =====================================
+
+#contact-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 0.75rem 1.5rem;
+
+  border: 1px solid rgba(0, 47, 73, 0.3);
+  border-radius: 5rem;
+
+  color: #002f49;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+
+  i {
+    width: 2rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #c01221;
+    color: #fef0d5;
+
+    font-size: 0.95rem;
+
+    transition:
+      transform 0.35s ease,
+      background-color 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #002f49;
+
+    border-color: #002f49;
+
+    color: #fef0d5;
+
+    i {
+      transform: rotate(45deg);
+
+      background-color: #c01221;
+    }
+  }
+}
+
+// =====================================
+// HAMBURGER BUTTON
+// =====================================
+
+#menu-toggle {
+  display: none;
+
+  width: 2.8rem;
+  height: 2.8rem;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 1100;
+
+  span {
+    display: block;
+
+    width: 1.7rem;
+    height: 1.5px;
+
+    margin: 0.4rem auto;
+
+    background-color: #002f49;
+
+    transition:
+      transform 0.3s ease,
+      opacity 0.25s ease,
+      background-color 0.3s ease;
+  }
+}
+
+// =====================================
+// SCROLLED NAVBAR
+// =====================================
+
+#navbar.navbar-scrolled {
+  background-color: rgba(254, 240, 213, 0.92);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 1px 0 rgba(0, 47, 73, 0.08);
+}
+
+// =====================================
+// MOBILE MENU
+// =====================================
+
+#mobile-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100dvh;
+
+  padding: 8rem 2rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #002f49;
+
+  z-index: 900;
+
+  visibility: hidden;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+// =====================================
+// MOBILE MENU OPEN
+// =====================================
+
+#mobile-menu.menu-open {
+  visibility: visible;
+
+  opacity: 1;
+
+  pointer-events: auto;
+}
+
+// =====================================
+// MOBILE MENU LINKS
+// =====================================
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.35rem;
+
+  a {
+    color: #fef0d5;
+
+    font-size: clamp(2.2rem, 9vw, 4rem);
+
+    font-weight: 400;
+
+    text-decoration: none;
+
+    line-height: 0.95;
+
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      color: #c01221;
+
+      transform: translateX(0.4rem);
+    }
+  }
+}
+
+// =====================================
+// MOBILE CONTACT
+// =====================================
+
+.mobile-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(254, 240, 213, 0.2);
+
+  color: #fef0d5;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+
+  i {
+    font-size: 1.5rem;
+
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    color: #c01221;
+
+    i {
+      transform: translate(0.3rem, -0.2rem);
+    }
+  }
+}
+
+// =====================================
+// TABLET
+// =====================================
+
+@media (max-width: 1100px) {
+  #navbar {
+    padding: 0 2rem;
+  }
+
+  #logo {
+    img {
+      width: 6rem;
+    }
+  }
+
+  #nav {
+    gap: 1.1rem;
+
+    a {
+      font-size: 0.7rem;
+    }
+  }
+
+  #contact-btn {
+    font-size: 0.7rem;
+
+    gap: 0.5rem;
+
+    padding: 0.45rem 0.5rem 0.45rem 0.8rem;
+  }
+}
+
+// =====================================
+// MOBILE
+// =====================================
+
+@media (max-width: 768px) {
+  #navbar {
+    height: 5rem;
+
+    padding: 0 1.5rem;
+  }
+
+  #logo {
+    img {
+      width: 6rem;
+    }
+  }
+
+  #nav,
+  #contact-btn {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #mobile-menu {
+    padding: 7.5rem 1.5rem 2rem;
+  }
+
+  .mobile-menu-links {
+    gap: 1.25rem;
+
+    a {
+      font-size: clamp(2.2rem, 11vw, 3.5rem);
+    }
+  }
+}
+
+// =====================================
+// SMALL MOBILE
+// =====================================
+
+@media (max-width: 480px) {
+  #navbar {
+    padding: 0 1.2rem;
+  }
+
+  #logo {
+    img {
+      width: 5.5rem;
+    }
+  }
+
+  #mobile-menu {
+    padding: 7rem 1.2rem 1.5rem;
+  }
+
+  .mobile-menu-links {
+    gap: 1.1rem;
+
+    a {
+      font-size: clamp(2rem, 10vw, 3rem);
+    }
+  }
+}
+
+// =====================================
+// HAMBURGER → CLOSE
+// =====================================
+
+#menu-toggle.active {
+  span {
+    background-color: #fef0d5;
+  }
+
+  span:nth-child(1) {
+    transform: translateY(0.55rem) rotate(45deg);
+  }
+
+  span:nth-child(2) {
+    transform: translateY(-0.55rem) rotate(-45deg);
+  }
+}

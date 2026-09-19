@@ -1,0 +1,326 @@
+#features {
+  position: relative;
+  height: 100vh;
+
+  background-color: #17302f;
+  color: #f7f3e9;
+
+  overflow: hidden;
+}
+
+#features .features-sticky {
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+#features .features-heading {
+  position: absolute;
+
+  top: 3rem;
+  left: 4rem;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+#features .features-heading p {
+  margin-bottom: 1rem;
+
+  color: #f0b24b;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15rem;
+}
+
+#features .features-heading h2 {
+  max-width: 35rem;
+
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.1rem;
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+#features .features-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#features .features-track {
+  display: flex;
+
+  width: max-content;
+  height: 100%;
+}
+
+#features .feature {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8rem 8vw 4rem;
+}
+
+#features .feature-number {
+  position: absolute;
+
+  top: 3rem;
+  right: 4rem;
+
+  font-size: 1rem;
+
+  color: rgba(247, 243, 233, 0.5);
+}
+
+#features .feature-content {
+  width: 45%;
+
+  margin-top: 5rem;
+}
+
+#features .feature-content > span {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  color: #f0b24b;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15rem;
+}
+
+#features .feature-content h3 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.15rem;
+}
+
+#features .feature-content p {
+  max-width: 30rem;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  color: rgba(247, 243, 233, 0.7);
+}
+
+#features .feature-points {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.7rem;
+
+  margin-top: 2rem;
+}
+
+#features .feature-points span {
+  padding: 0.6rem 1rem;
+
+  border: 1px solid rgba(247, 243, 233, 0.3);
+  border-radius: 2rem;
+
+  font-size: 0.75rem;
+}
+
+#features .feature-visual {
+  width: 35%;
+
+  aspect-ratio: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(247, 243, 233, 0.2);
+  border-radius: 50%;
+}
+
+#features .feature-visual i {
+  font-size: clamp(8rem, 15vw, 18rem);
+
+  color: #f0b24b;
+}
+
+#features .features-pagination {
+  display: none;
+}
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 900px) {
+  #features {
+    height: auto;
+
+    overflow: hidden;
+  }
+
+  #features .features-sticky {
+    height: auto;
+
+    overflow: visible;
+  }
+
+  #features .features-heading {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    padding: 5rem 1.5rem 1rem;
+  }
+
+  #features .features-heading h2 {
+    max-width: 100%;
+
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  /* SWIPER CONTAINER */
+
+  #features .features-swiper {
+    width: 100%;
+
+    height: auto;
+
+    padding: 1rem 1.5rem 3rem;
+
+    overflow: hidden;
+  }
+
+  /* IMPORTANT:
+     Let Swiper control this element */
+
+  #features .features-track {
+    display: flex;
+
+    width: auto;
+    height: auto;
+
+    transform: none;
+  }
+
+  /* SWIPER SLIDES */
+
+  #features .feature {
+    width: 100%;
+
+    height: auto;
+    min-height: 30rem;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 2rem;
+
+    border: 1px solid rgba(247, 243, 233, 0.2);
+
+    border-radius: 1.25rem;
+  }
+
+  #features .feature-number {
+    position: absolute;
+
+    top: 1.5rem;
+    right: 1.5rem;
+
+    font-size: 0.75rem;
+  }
+
+  #features .feature-content {
+    width: 100%;
+
+    margin-top: 1.5rem;
+  }
+
+  #features .feature-content > span {
+    margin-bottom: 1rem;
+
+    font-size: 0.65rem;
+  }
+
+  #features .feature-content h3 {
+    margin-bottom: 1rem;
+
+    font-size: clamp(2.3rem, 10vw, 3.8rem);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.08rem;
+  }
+
+  #features .feature-content p {
+    max-width: 100%;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+  }
+
+  #features .feature-points {
+    gap: 0.45rem;
+
+    margin-top: 1.25rem;
+  }
+
+  #features .feature-points span {
+    padding: 0.45rem 0.7rem;
+
+    font-size: 0.6rem;
+  }
+
+  #features .feature-visual {
+    width: min(45vw, 11rem);
+
+    align-self: center;
+  }
+
+  #features .feature-visual i {
+    font-size: clamp(5rem, 18vw, 8rem);
+  }
+
+  #features .features-pagination {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 1.25rem;
+  }
+}
