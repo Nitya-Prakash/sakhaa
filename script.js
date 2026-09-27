@@ -747,7 +747,9 @@ function initJourney() {
   if (!journeySwiperElement) return;
 
   const journeyCurrent = document.querySelector(".journey-current");
+
   const journeyTotal = document.querySelector(".journey-total");
+
   const journeyProgress = document.querySelector(".journey-progress-line");
 
   function updateJourneyProgress(swiper) {
@@ -769,7 +771,7 @@ function initJourney() {
     }
   }
 
-  new Swiper(".journey-swiper", {
+  new Swiper(journeySwiperElement, {
     modules: [Navigation],
 
     slidesPerView: "auto",

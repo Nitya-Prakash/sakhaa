@@ -1,3 +1,7 @@
+/* =========================================================
+JOURNEY
+========================================================= */
+
 #journey {
   width: 100%;
   min-height: 100vh;
@@ -17,9 +21,9 @@
   margin: 0 auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* =========================================================
+HEADER
+========================================================= */
 
 .journey-header {
   display: flex;
@@ -70,9 +74,9 @@
   color: rgba(0, 47, 73, 0.68);
 }
 
-/* =========================
-   CAROUSEL
-========================= */
+/* =========================================================
+CAROUSEL
+========================================================= */
 
 .journey-carousel {
   position: relative;
@@ -85,7 +89,7 @@
 }
 
 .journey-swiper {
-  width: calc(100% - 30rem);
+  width: calc(100% - 12rem);
 
   margin: 0 auto;
 
@@ -96,13 +100,24 @@
   align-items: stretch;
 }
 
-.journey-slide {
-  width: 68%;
+/* =========================================================
+JOURNEY SLIDE
 
-  height: auto;
+CONTENT = LEFT
+IMAGE   = RIGHT
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+IMPORTANT:
+We explicitly control the flex direction and widths.
+========================================================= */
+
+.journey-swiper .journey-slide {
+  width: 78% !important;
+  height: 550px;
+
+  display: flex !important;
+  flex-direction: row !important;
+
+  flex-shrink: 0;
 
   background: #f7f7f5;
 
@@ -112,110 +127,18 @@
   overflow: hidden;
 }
 
-/* =========================
-   SIDE NAVIGATION
-========================= */
+/* =========================================================
+CONTENT — LEFT
+========================================================= */
 
-.journey-prev,
-.journey-next {
-  position: absolute;
-  top: 50%;
-
-  z-index: 10;
-
-  width: 3.5rem;
-  height: 3.5rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(0, 47, 73, 0.2);
-  border-radius: 50%;
-
-  background: transparent;
-  color: #002f49;
-
-  font-size: 1rem;
-
-  cursor: pointer;
-
-  transform: translateY(-50%);
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.journey-prev {
-  left: 10%;
-}
-
-.journey-next {
-  right: 10%;
-}
-
-.journey-prev:hover,
-.journey-next:hover {
-  background: #002f49;
-  color: #fef0d5;
-  border-color: #002f49;
-}
-
-.journey-prev:active,
-.journey-next:active {
-  transform: translateY(-50%) scale(0.94);
-}
-
-.journey-prev.swiper-button-disabled,
-.journey-next.swiper-button-disabled {
-  opacity: 0.3;
-  cursor: default;
-}
-
-.journey-prev.swiper-button-disabled:hover,
-.journey-next.swiper-button-disabled:hover {
-  background: transparent;
-  color: #002f49;
-  border-color: rgba(0, 47, 73, 0.2);
-}
-
-/* =========================
-   IMAGE
-========================= */
-
-.journey-image {
-  width: 100%;
-  height: 390px;
-  min-height: 390px;
-
-  overflow: hidden;
-
-  background: #669bbb;
-}
-
-.journey-image img {
-  width: 100%;
+.journey-swiper .journey-slide .journey-content {
+  width: 50% !important;
   height: 100%;
 
-  display: block;
+  flex: 0 0 50% !important;
+  order: 1 !important;
 
-  object-fit: cover;
-
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.journey-slide:hover .journey-image img {
-  transform: scale(1.035);
-}
-
-/* =========================
-   CONTENT
-========================= */
-
-.journey-content {
+  min-width: 0;
   min-height: 390px;
 
   display: flex;
@@ -223,6 +146,44 @@
 
   padding: 1.7rem;
 }
+
+/* =========================================================
+IMAGE — RIGHT
+========================================================= */
+
+.journey-swiper .journey-slide .journey-image {
+  width: 50% !important;
+  height: 100%;
+
+  flex: 0 0 50% !important;
+  order: 2 !important;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: #669bbb;
+}
+
+.journey-swiper .journey-slide .journey-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey-swiper .journey-slide:hover .journey-image img {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+META
+========================================================= */
 
 .journey-meta {
   display: flex;
@@ -246,6 +207,10 @@
 .journey-meta span:last-child {
   color: #780001;
 }
+
+/* =========================================================
+TEXT
+========================================================= */
 
 .journey-text {
   margin-top: auto;
@@ -274,9 +239,9 @@
   color: rgba(0, 47, 73, 0.62);
 }
 
-/* =========================
-   HIGHLIGHT
-========================= */
+/* =========================================================
+HIGHLIGHT
+========================================================= */
 
 .journey-highlight {
   display: flex;
@@ -311,9 +276,9 @@
   color: #c01221;
 }
 
-/* =========================
-   CARD READ MORE
-========================= */
+/* =========================================================
+CARD READ MORE
+========================================================= */
 
 .journey-card-link {
   display: inline-flex;
@@ -357,6 +322,7 @@
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
+    border-color 0.3s ease,
     transform 0.3s ease;
 }
 
@@ -373,9 +339,79 @@
   transform: translate(2px, -2px);
 }
 
-/* =========================
-   PROGRESS
-========================= */
+/* =========================================================
+NAVIGATION
+========================================================= */
+
+.journey-prev,
+.journey-next {
+  position: absolute;
+  top: 50%;
+
+  z-index: 10;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+  border-radius: 50%;
+
+  background: transparent;
+  color: #002f49;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.journey-prev {
+  left: 0;
+}
+
+.journey-next {
+  right: 0;
+}
+
+.journey-prev:hover,
+.journey-next:hover {
+  background: #002f49;
+  color: #fef0d5;
+  border-color: #002f49;
+}
+
+.journey-prev:active,
+.journey-next:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.journey-prev.swiper-button-disabled,
+.journey-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.journey-prev.swiper-button-disabled:hover,
+.journey-next.swiper-button-disabled:hover {
+  background: transparent;
+  color: #002f49;
+  border-color: rgba(0, 47, 73, 0.2);
+}
+
+/* =========================================================
+PROGRESS
+========================================================= */
 
 .journey-controls {
   width: 100%;
@@ -427,9 +463,9 @@
   transition: width 0.4s ease;
 }
 
-/* =========================
-   FULL JOURNEY LINK
-========================= */
+/* =========================================================
+READ MORE STORIES
+========================================================= */
 
 .read-more-div {
   display: flex;
@@ -475,13 +511,9 @@
   transform: translate(3px, -3px);
 }
 
-/* =========================
-   TABLET
-========================= */
-
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+TABLET
+========================================================= */
 
 @media (max-width: 1100px) {
   #journey {
@@ -496,20 +528,23 @@
     width: calc(100% - 7rem);
   }
 
-  .journey-slide {
-    width: 78%;
-  }
-
-  .journey-image,
-  .journey-content {
-    min-height: 370px;
-  }
-
-  .journey-image {
+  .journey-swiper .journey-slide {
+    width: 82% !important;
     height: 370px;
   }
 
-  /* Move arrows below the card */
+  .journey-swiper .journey-slide .journey-content {
+    width: 50% !important;
+    flex-basis: 50% !important;
+
+    min-height: 370px;
+  }
+
+  .journey-swiper .journey-slide .journey-image {
+    width: 50% !important;
+    flex-basis: 50% !important;
+  }
+
   .journey-prev,
   .journey-next {
     top: auto;
@@ -534,25 +569,26 @@
     transform: scale(0.94);
   }
 
-  /* Give space for the arrows before progress */
   .journey-controls {
     margin-top: 5.5rem;
   }
 }
 
-/* =========================
-   TABLET / SMALL LAPTOP
-========================= */
+/* =========================================================
+TABLET / SMALL LAPTOP
+========================================================= */
 
 @media (max-width: 900px) {
   .journey-header {
     display: block;
+
     margin-bottom: 3rem;
   }
 
   .journey-intro {
     width: 100%;
     max-width: 30rem;
+
     margin-top: 2rem;
   }
 
@@ -560,11 +596,10 @@
     width: calc(100% - 6rem);
   }
 
-  .journey-slide {
-    width: 82%;
+  .journey-swiper .journey-slide {
+    width: 86% !important;
   }
 
-  /* Keep arrows below the card */
   .journey-prev,
   .journey-next {
     bottom: -4rem;
@@ -583,13 +618,14 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+MOBILE
+========================================================= */
 
 @media (max-width: 700px) {
   #journey {
     padding: 3rem 2rem;
+
     border-radius: 0.8rem;
   }
 
@@ -599,11 +635,13 @@
 
   .journey-label {
     margin-bottom: 1.5rem;
+
     font-size: 0.72rem;
   }
 
   .journey-header h2 {
     font-size: clamp(3.8rem, 17vw, 5.5rem);
+
     line-height: 0.85;
   }
 
@@ -622,27 +660,42 @@
     width: 100%;
   }
 
-  .journey-slide {
-    width: 88%;
+  /*
+    MOBILE:
+    IMAGE
+    ↓
+    CONTENT
+  */
 
-    display: flex;
-    flex-direction: column;
+  .journey-swiper .journey-slide {
+    width: 88% !important;
+    height: auto;
+
+    display: flex !important;
+    flex-direction: column !important;
   }
 
-  .journey-image {
+  .journey-swiper .journey-slide .journey-image {
+    width: 100% !important;
     height: 280px;
     min-height: 280px;
+
+    flex: 0 0 280px !important;
+
+    order: 1 !important;
   }
 
-  .journey-content {
-    min-height: 390px;
+  .journey-swiper .journey-slide .journey-content {
+    width: 100% !important;
+    height: auto;
+
+    flex: 0 0 auto !important;
+
     padding: 1.4rem;
+
+    order: 2 !important;
   }
 
-  /*
-    Move navigation below the card
-    on mobile.
-  */
   .journey-prev,
   .journey-next {
     top: auto;
@@ -667,11 +720,9 @@
     transform: scale(0.94);
   }
 
-  /*
-    Progress comes below the arrows.
-  */
   .journey-controls {
     width: 100%;
+
     margin-top: 5.5rem;
 
     display: flex;
@@ -703,9 +754,9 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* =========================================================
+SMALL MOBILE
+========================================================= */
 
 @media (max-width: 480px) {
   #journey {
@@ -716,17 +767,20 @@
     font-size: clamp(3.4rem, 16vw, 4.8rem);
   }
 
-  .journey-slide {
-    width: 92%;
+  .journey-swiper .journey-slide {
+    width: 92% !important;
   }
 
-  .journey-image {
+  .journey-swiper .journey-slide .journey-image {
     height: 250px;
     min-height: 250px;
+
+    flex-basis: 250px !important;
   }
 
-  .journey-content {
+  .journey-swiper .journey-slide .journey-content {
     min-height: 390px;
+
     padding: 1.25rem;
   }
 

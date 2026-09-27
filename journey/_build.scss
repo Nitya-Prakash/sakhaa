@@ -119,7 +119,7 @@
 }
 
 .build-hero-image {
-  width: 100%;
+  width: 70%;
 
   overflow: hidden;
 
@@ -137,6 +137,8 @@
   max-height: 700px;
 
   object-fit: cover;
+  object-position: center;
+  aspect-ratio: 0.6;
 }
 
 /* =========================
@@ -333,7 +335,8 @@
 }
 
 .build-image-large {
-  width: 78%;
+  width: 70%;
+  height: 100%;
 
   margin-left: auto;
 
@@ -346,9 +349,11 @@
 
 .build-image-large img {
   width: 100%;
-  height: auto;
+  height: 100%;
 
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .build-image-caption {
@@ -559,23 +564,6 @@
   line-height: 1.5;
 
   color: #002f49;
-}
-
-.first-movement-image {
-  width: 75%;
-
-  overflow: hidden;
-
-  border-radius: 1rem;
-
-  background: #669bbb;
-}
-
-.first-movement-image img {
-  width: 100%;
-  height: auto;
-
-  display: block;
 }
 
 /* =========================
@@ -822,6 +810,10 @@
 
   .build-hero {
     padding: 3.5rem 2.5rem 5rem;
+  }
+
+  .build-hero-image {
+    width: 100%;
   }
 
   .build-heading {

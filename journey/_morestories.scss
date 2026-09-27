@@ -42,8 +42,8 @@
 /* ------------------------------------------------ */
 
 .diksha-image-space {
-  width: 100%;
-  height: min(58vw, 580px);
+  width: 70%;
+  height: min(58vw, 680px);
 
   margin-top: 2rem;
 
@@ -66,7 +66,7 @@
 
   display: block;
 
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* ------------------------------------------------ */
@@ -621,6 +621,14 @@
     padding: 8rem 2.5rem 4rem;
   }
 
+  .diksha-image-space {
+    width: 100%;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
   .diksha-title {
     grid-template-columns: 1fr;
 
@@ -683,6 +691,7 @@
 
   .diksha-image-space {
     height: 70vw;
+    width: 100%;
 
     min-height: 250px;
     max-height: 380px;
@@ -690,6 +699,10 @@
     margin-top: 1.5rem;
 
     border-radius: 0.8rem;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   .diksha-title {

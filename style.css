@@ -2987,6 +2987,9 @@
     font-size: 0.8rem;
   }
 }
+/* =========================================================
+JOURNEY
+========================================================= */
 #journey {
   width: 100%;
   min-height: 100vh;
@@ -3003,9 +3006,9 @@
   margin: 0 auto;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* =========================================================
+HEADER
+========================================================= */
 .journey-header {
   display: flex;
   align-items: flex-end;
@@ -3048,9 +3051,9 @@
   color: rgba(0, 47, 73, 0.68);
 }
 
-/* =========================
-   CAROUSEL
-========================= */
+/* =========================================================
+CAROUSEL
+========================================================= */
 .journey-carousel {
   position: relative;
   width: 100%;
@@ -3060,7 +3063,7 @@
 }
 
 .journey-swiper {
-  width: calc(100% - 30rem);
+  width: calc(100% - 12rem);
   margin: 0 auto;
   overflow: visible;
 }
@@ -3069,20 +3072,194 @@
   align-items: stretch;
 }
 
-.journey-slide {
-  width: 68%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* =========================================================
+JOURNEY SLIDE
+
+CONTENT = LEFT
+IMAGE   = RIGHT
+
+IMPORTANT:
+We explicitly control the flex direction and widths.
+========================================================= */
+.journey-swiper .journey-slide {
+  width: 78% !important;
+  height: 550px;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-shrink: 0;
   background: #f7f7f5;
   border: 1px solid rgba(0, 47, 73, 0.16);
   border-radius: 1rem;
   overflow: hidden;
 }
 
-/* =========================
-   SIDE NAVIGATION
-========================= */
+/* =========================================================
+CONTENT — LEFT
+========================================================= */
+.journey-swiper .journey-slide .journey-content {
+  width: 50% !important;
+  height: 100%;
+  flex: 0 0 50% !important;
+  order: 1 !important;
+  min-width: 0;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem;
+}
+
+/* =========================================================
+IMAGE — RIGHT
+========================================================= */
+.journey-swiper .journey-slide .journey-image {
+  width: 50% !important;
+  height: 100%;
+  flex: 0 0 50% !important;
+  order: 2 !important;
+  min-width: 0;
+  overflow: hidden;
+  background: #669bbb;
+}
+
+.journey-swiper .journey-slide .journey-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.journey-swiper .journey-slide:hover .journey-image img {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+META
+========================================================= */
+.journey-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 47, 73, 0.16);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.journey-meta span:first-child {
+  color: #c01221;
+}
+
+.journey-meta span:last-child {
+  color: #780001;
+}
+
+/* =========================================================
+TEXT
+========================================================= */
+.journey-text {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.journey-text h3 {
+  max-width: 25rem;
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.journey-text p {
+  max-width: 25rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(0, 47, 73, 0.62);
+}
+
+/* =========================================================
+HIGHLIGHT
+========================================================= */
+.journey-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 47, 73, 0.16);
+}
+
+.journey-highlight strong {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #780001;
+}
+
+.journey-highlight span {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(192, 18, 33, 0.35);
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #c01221;
+}
+
+/* =========================================================
+CARD READ MORE
+========================================================= */
+.journey-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 47, 73, 0.16);
+  color: #002f49;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.journey-card-link i {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 47, 73, 0.2);
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.journey-card-link:hover {
+  color: #c01221;
+  padding-left: 0.3rem;
+}
+
+.journey-card-link:hover i {
+  background: #c01221;
+  color: #fef0d5;
+  border-color: #c01221;
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+NAVIGATION
+========================================================= */
 .journey-prev,
 .journey-next {
   position: absolute;
@@ -3104,11 +3281,11 @@
 }
 
 .journey-prev {
-  left: 10%;
+  left: 0;
 }
 
 .journey-next {
-  right: 10%;
+  right: 0;
 }
 
 .journey-prev:hover,
@@ -3136,158 +3313,9 @@
   border-color: rgba(0, 47, 73, 0.2);
 }
 
-/* =========================
-   IMAGE
-========================= */
-.journey-image {
-  width: 100%;
-  height: 390px;
-  min-height: 390px;
-  overflow: hidden;
-  background: #669bbb;
-}
-
-.journey-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.journey-slide:hover .journey-image img {
-  transform: scale(1.035);
-}
-
-/* =========================
-   CONTENT
-========================= */
-.journey-content {
-  min-height: 390px;
-  display: flex;
-  flex-direction: column;
-  padding: 1.7rem;
-}
-
-.journey-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(0, 47, 73, 0.16);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.journey-meta span:first-child {
-  color: #c01221;
-}
-
-.journey-meta span:last-child {
-  color: #780001;
-}
-
-.journey-text {
-  margin-top: auto;
-  padding-top: 2rem;
-}
-
-.journey-text h3 {
-  max-width: 25rem;
-  margin: 0 0 1rem;
-  font-size: clamp(1.8rem, 2.6vw, 2.8rem);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
-}
-
-.journey-text p {
-  max-width: 25rem;
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: rgba(0, 47, 73, 0.62);
-}
-
-/* =========================
-   HIGHLIGHT
-========================= */
-.journey-highlight {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 47, 73, 0.16);
-}
-
-.journey-highlight strong {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #780001;
-}
-
-.journey-highlight span {
-  padding: 0.35rem 0.55rem;
-  border: 1px solid rgba(192, 18, 33, 0.35);
-  border-radius: 100px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #c01221;
-}
-
-/* =========================
-   CARD READ MORE
-========================= */
-.journey-card-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 47, 73, 0.16);
-  color: #002f49;
-  text-decoration: none;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: color 0.3s ease, padding-left 0.3s ease;
-}
-
-.journey-card-link i {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0, 47, 73, 0.2);
-  border-radius: 50%;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.journey-card-link:hover {
-  color: #c01221;
-  padding-left: 0.3rem;
-}
-
-.journey-card-link:hover i {
-  background: #c01221;
-  color: #fef0d5;
-  border-color: #c01221;
-  transform: translate(2px, -2px);
-}
-
-/* =========================
-   PROGRESS
-========================= */
+/* =========================================================
+PROGRESS
+========================================================= */
 .journey-controls {
   width: 100%;
   display: flex;
@@ -3327,9 +3355,9 @@
   transition: width 0.4s ease;
 }
 
-/* =========================
-   FULL JOURNEY LINK
-========================= */
+/* =========================================================
+READ MORE STORIES
+========================================================= */
 .read-more-div {
   display: flex;
   justify-content: flex-end;
@@ -3364,12 +3392,9 @@
   transform: translate(3px, -3px);
 }
 
-/* =========================
-   TABLET
-========================= */
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+TABLET
+========================================================= */
 @media (max-width: 1100px) {
   #journey {
     padding: 3.5rem 2.5rem;
@@ -3380,17 +3405,19 @@
   .journey-swiper {
     width: calc(100% - 7rem);
   }
-  .journey-slide {
-    width: 78%;
-  }
-  .journey-image,
-  .journey-content {
-    min-height: 370px;
-  }
-  .journey-image {
+  .journey-swiper .journey-slide {
+    width: 82% !important;
     height: 370px;
   }
-  /* Move arrows below the card */
+  .journey-swiper .journey-slide .journey-content {
+    width: 50% !important;
+    flex-basis: 50% !important;
+    min-height: 370px;
+  }
+  .journey-swiper .journey-slide .journey-image {
+    width: 50% !important;
+    flex-basis: 50% !important;
+  }
   .journey-prev,
   .journey-next {
     top: auto;
@@ -3409,14 +3436,13 @@
   .journey-next:active {
     transform: scale(0.94);
   }
-  /* Give space for the arrows before progress */
   .journey-controls {
     margin-top: 5.5rem;
   }
 }
-/* =========================
-   TABLET / SMALL LAPTOP
-========================= */
+/* =========================================================
+TABLET / SMALL LAPTOP
+========================================================= */
 @media (max-width: 900px) {
   .journey-header {
     display: block;
@@ -3430,10 +3456,9 @@
   .journey-swiper {
     width: calc(100% - 6rem);
   }
-  .journey-slide {
-    width: 82%;
+  .journey-swiper .journey-slide {
+    width: 86% !important;
   }
-  /* Keep arrows below the card */
   .journey-prev,
   .journey-next {
     bottom: -4rem;
@@ -3448,9 +3473,9 @@
     margin-top: 5.5rem;
   }
 }
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+MOBILE
+========================================================= */
 @media (max-width: 700px) {
   #journey {
     padding: 3rem 2rem;
@@ -3478,23 +3503,32 @@
   .journey-swiper {
     width: 100%;
   }
-  .journey-slide {
-    width: 88%;
-    display: flex;
-    flex-direction: column;
+  /*
+    MOBILE:
+    IMAGE
+    ↓
+    CONTENT
+  */
+  .journey-swiper .journey-slide {
+    width: 88% !important;
+    height: auto;
+    display: flex !important;
+    flex-direction: column !important;
   }
-  .journey-image {
+  .journey-swiper .journey-slide .journey-image {
+    width: 100% !important;
     height: 280px;
     min-height: 280px;
+    flex: 0 0 280px !important;
+    order: 1 !important;
   }
-  .journey-content {
-    min-height: 390px;
+  .journey-swiper .journey-slide .journey-content {
+    width: 100% !important;
+    height: auto;
+    flex: 0 0 auto !important;
     padding: 1.4rem;
+    order: 2 !important;
   }
-  /*
-    Move navigation below the card
-    on mobile.
-  */
   .journey-prev,
   .journey-next {
     top: auto;
@@ -3513,9 +3547,6 @@
   .journey-next:active {
     transform: scale(0.94);
   }
-  /*
-    Progress comes below the arrows.
-  */
   .journey-controls {
     width: 100%;
     margin-top: 5.5rem;
@@ -3541,9 +3572,9 @@
     margin-top: 3rem;
   }
 }
-/* =========================
-   SMALL MOBILE
-========================= */
+/* =========================================================
+SMALL MOBILE
+========================================================= */
 @media (max-width: 480px) {
   #journey {
     padding: 2.5rem 2rem;
@@ -3551,14 +3582,15 @@
   .journey-header h2 {
     font-size: clamp(3.4rem, 16vw, 4.8rem);
   }
-  .journey-slide {
-    width: 92%;
+  .journey-swiper .journey-slide {
+    width: 92% !important;
   }
-  .journey-image {
+  .journey-swiper .journey-slide .journey-image {
     height: 250px;
     min-height: 250px;
+    flex-basis: 250px !important;
   }
-  .journey-content {
+  .journey-swiper .journey-slide .journey-content {
     min-height: 390px;
     padding: 1.25rem;
   }
