@@ -2,11 +2,10 @@
 @use "./sections/hero";
 @use "./sections/problem";
 @use "./sections/about";
-@use "./sections/features";
 @use "./sections/howItWorks";
-@use "./sections/impact";
 @use "./sections//journey";
 @use "./sections/contact";
+// @use "./sections/journeyPage";
 
 * {
   margin: 0;
@@ -28,7 +27,6 @@
 
 html,
 body {
-  height: 100%;
   width: 100%;
   scroll-behavior: smooth;
 }

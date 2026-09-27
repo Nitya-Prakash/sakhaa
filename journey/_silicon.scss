@@ -1,0 +1,1164 @@
+/* =========================================
+   SILICON / TECHTRONICS 2026
+========================================= */
+
+#silicon-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #fef0d5;
+  color: #002f49;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   BACK TO JOURNEY
+========================================= */
+
+.silicon-back {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+  padding: 2rem 3rem 0;
+}
+
+.silicon-back a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  color: #002f49;
+  text-decoration: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.silicon-back a i {
+  font-size: 1rem;
+}
+
+.silicon-back a:hover {
+  color: #c01221;
+  gap: 0.9rem;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.silicon-hero {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 4rem 3rem 7rem;
+}
+
+.silicon-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(0, 47, 73, 0.18);
+}
+
+.silicon-label,
+.silicon-event {
+  margin: 0;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.silicon-label {
+  color: #c01221;
+}
+
+.silicon-event {
+  color: #780001;
+}
+
+.silicon-hero-content {
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.6fr;
+
+  gap: 5rem;
+
+  align-items: end;
+
+  padding: 4rem 0 4.5rem;
+}
+
+.silicon-hero-title h1 {
+  margin: 0;
+
+  max-width: 55rem;
+
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  font-weight: 500;
+
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+}
+
+.silicon-hero-title h1 span {
+  color: #c01221;
+}
+
+.silicon-hero-intro {
+  padding-bottom: 0.5rem;
+}
+
+.silicon-hero-intro p {
+  max-width: 20rem;
+
+  margin: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+.silicon-hero-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 1.2rem;
+
+  background: #669bbb;
+}
+
+.silicon-hero-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  max-height: 700px;
+
+  object-fit: cover;
+
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.silicon-hero-image:hover img {
+  transform: scale(1.025);
+}
+
+/* =========================================
+   GENERAL SECTION
+========================================= */
+
+.silicon-section {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 7rem 3rem;
+}
+
+.silicon-section-label {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  margin-bottom: 3.5rem;
+}
+
+.silicon-section-label span {
+  color: #c01221;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-section-label p {
+  margin: 0;
+
+  color: #780001;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   EVENT
+========================================= */
+
+.silicon-two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 6rem;
+}
+
+.silicon-section-heading h2 {
+  max-width: 38rem;
+
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  font-weight: 400;
+
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.silicon-section-heading h2 span {
+  color: #c01221;
+}
+
+.silicon-section-copy {
+  max-width: 34rem;
+}
+
+.silicon-section-copy p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(0, 47, 73, 0.7);
+}
+
+.silicon-section-copy p:last-child {
+  margin-bottom: 0;
+
+  color: #002f49;
+}
+
+/* =========================================
+   DARK / SLEEPLESS NIGHTS
+========================================= */
+
+.silicon-dark-section {
+  width: 100%;
+
+  padding: 7rem 3rem;
+
+  background: #002f49;
+
+  color: #fef0d5;
+}
+
+.silicon-dark-inner {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+}
+
+.silicon-dark-label {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(254, 240, 213, 0.2);
+}
+
+.silicon-dark-label span {
+  color: #c01221;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-dark-label p {
+  margin: 0;
+
+  color: #669bbb;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-dark-content {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 6rem;
+
+  padding: 5rem 0;
+}
+
+.silicon-dark-heading h2 {
+  margin: 0;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+
+  text-transform: uppercase;
+}
+
+.silicon-dark-heading h2 span {
+  color: #c01221;
+}
+
+.silicon-dark-copy {
+  max-width: 32rem;
+}
+
+.silicon-dark-copy p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(254, 240, 213, 0.68);
+}
+
+.silicon-dark-copy .silicon-dark-lead {
+  margin-bottom: 2rem;
+
+  color: #fef0d5;
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.silicon-quote {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(254, 240, 213, 0.2);
+}
+
+.silicon-quote span {
+  color: #669bbb;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-quote p {
+  margin: 0;
+
+  font-size: clamp(1.7rem, 3vw, 3rem);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+/* =========================================
+   EXHIBITION
+========================================= */
+
+.silicon-exhibition-grid {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 5rem;
+
+  align-items: center;
+}
+
+.silicon-exhibition-image {
+  width: 100%;
+  height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background: #669bbb;
+}
+
+.silicon-exhibition-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.silicon-exhibition-image:hover img {
+  transform: scale(1.025);
+}
+
+.silicon-exhibition-copy h2 {
+  max-width: 35rem;
+
+  margin: 0 0 2.5rem;
+
+  font-size: clamp(3.3rem, 5vw, 5.5rem);
+  font-weight: 400;
+
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+}
+
+.silicon-exhibition-copy h2 span {
+  color: #c01221;
+}
+
+.silicon-exhibition-copy p {
+  max-width: 29rem;
+
+  margin: 0 0 1.2rem;
+
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: rgba(0, 47, 73, 0.65);
+}
+
+.silicon-exhibition-copy .silicon-highlight {
+  margin-top: 2rem;
+
+  padding-top: 1.2rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+
+  color: #002f49;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   THE MOMENT
+========================================= */
+
+.silicon-moment {
+  width: 100%;
+
+  padding: 9rem 3rem;
+
+  background: #f7f7f5;
+}
+
+.silicon-moment-inner {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+}
+
+.silicon-moment-label {
+  margin: 0 0 3rem;
+
+  color: #780001;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-moment h2 {
+  max-width: 80rem;
+
+  margin: 0;
+
+  font-size: clamp(5rem, 11vw, 11rem);
+  font-weight: 400;
+
+  line-height: 0.78;
+  letter-spacing: -0.09em;
+
+  text-transform: uppercase;
+}
+
+.silicon-moment h2 span {
+  color: #c01221;
+}
+
+.silicon-moment-copy {
+  width: min(100%, 30rem);
+
+  margin: 5rem 0 0 auto;
+}
+
+.silicon-moment-copy p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: rgba(0, 47, 73, 0.65);
+}
+
+.silicon-moment-copy p:last-child {
+  color: #002f49;
+
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   WINNER
+========================================= */
+
+.silicon-winner {
+  width: 100%;
+
+  padding: 3rem;
+
+  background: #c01221;
+
+  color: #fef0d5;
+}
+
+.silicon-winner-top {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 1.5rem;
+
+  border-bottom: 1px solid rgba(254, 240, 213, 0.35);
+}
+
+.silicon-winner-top span {
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.silicon-winner-main {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 8rem 0;
+
+  text-align: center;
+}
+
+.silicon-winner-small {
+  margin: 0 0 1rem;
+
+  color: rgba(254, 240, 213, 0.7);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+.silicon-winner-main h2 {
+  margin: 0;
+
+  font-size: clamp(6rem, 17vw, 18rem);
+  font-weight: 400;
+
+  line-height: 0.75;
+  letter-spacing: -0.1em;
+}
+
+.silicon-winner-text {
+  margin: 3rem 0 0;
+
+  font-size: 1.1rem;
+
+  color: rgba(254, 240, 213, 0.8);
+}
+
+/* =========================================
+   LESSON
+========================================= */
+
+.silicon-lesson-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  gap: 7rem;
+
+  align-items: start;
+}
+
+.silicon-lesson-heading h2 {
+  margin: 0;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+}
+
+.silicon-lesson-heading h2 span {
+  color: #c01221;
+}
+
+.silicon-lesson-copy {
+  max-width: 31rem;
+}
+
+.silicon-lesson-copy p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.65;
+
+  color: rgba(0, 47, 73, 0.65);
+}
+
+.silicon-lesson-copy .silicon-final-highlight {
+  margin-top: 2.5rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+
+  color: #002f49;
+
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.silicon-closing {
+  width: 100%;
+
+  padding: 9rem 3rem;
+
+  background: #002f49;
+
+  color: #fef0d5;
+
+  text-align: center;
+}
+
+.silicon-closing > span {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  color: #669bbb;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+.silicon-closing h2 {
+  max-width: 75rem;
+
+  margin: 0 auto;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+}
+
+.silicon-closing h2 span {
+  color: #c01221;
+}
+
+.silicon-closing p {
+  max-width: 32rem;
+
+  margin: 2rem auto 0;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  color: rgba(254, 240, 213, 0.65);
+}
+
+/* =========================================
+   STORY NAVIGATION
+========================================= */
+
+.silicon-navigation {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+
+  padding: 3rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.silicon-navigation a {
+  color: #002f49;
+  text-decoration: none;
+}
+
+.silicon-nav-prev,
+.silicon-nav-next {
+  display: flex;
+  align-items: center;
+
+  gap: 1.2rem;
+}
+
+.silicon-nav-prev i,
+.silicon-nav-next i {
+  width: 2.8rem;
+  height: 2.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.silicon-nav-prev:hover i {
+  background: #002f49;
+
+  color: #fef0d5;
+
+  transform: translateX(-4px);
+}
+
+.silicon-nav-next:hover i {
+  background: #002f49;
+
+  color: #fef0d5;
+
+  transform: translateX(4px);
+}
+
+.silicon-nav-prev div,
+.silicon-nav-next div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.3rem;
+}
+
+.silicon-nav-next {
+  text-align: right;
+}
+
+.silicon-nav-prev span,
+.silicon-nav-next span {
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  color: #780001;
+}
+
+.silicon-nav-prev strong,
+.silicon-nav-next strong {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .silicon-hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .silicon-hero-intro {
+    padding-bottom: 0;
+  }
+
+  .silicon-hero-intro p {
+    max-width: 30rem;
+  }
+
+  .silicon-two-column,
+  .silicon-dark-content,
+  .silicon-exhibition-grid,
+  .silicon-lesson-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .silicon-dark-content {
+    padding: 4rem 0;
+  }
+
+  .silicon-dark-heading h2 {
+    font-size: clamp(5rem, 14vw, 9rem);
+  }
+
+  .silicon-exhibition-copy {
+    max-width: 38rem;
+  }
+
+  .silicon-lesson-copy {
+    max-width: 36rem;
+  }
+}
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 900px) {
+  .silicon-back {
+    padding: 1.5rem 2.5rem 0;
+  }
+
+  .silicon-hero {
+    padding: 3.5rem 2.5rem 5rem;
+  }
+
+  .silicon-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .silicon-dark-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .silicon-moment {
+    padding: 7rem 2.5rem;
+  }
+
+  .silicon-winner {
+    padding: 2.5rem;
+  }
+
+  .silicon-closing {
+    padding: 7rem 2.5rem;
+  }
+
+  .silicon-navigation {
+    padding: 2.5rem;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .silicon-back {
+    padding: 1.5rem 2rem 0;
+  }
+
+  .silicon-back a {
+    font-size: 0.68rem;
+  }
+
+  .silicon-hero {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .silicon-hero-top {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 0.7rem;
+  }
+
+  .silicon-label,
+  .silicon-event {
+    font-size: 0.68rem;
+  }
+
+  .silicon-hero-content {
+    gap: 2rem;
+
+    padding: 3rem 0;
+  }
+
+  .silicon-hero-title h1 {
+    font-size: clamp(3.6rem, 16vw, 5.5rem);
+
+    line-height: 0.86;
+  }
+
+  .silicon-hero-intro p {
+    max-width: 100%;
+
+    font-size: 0.95rem;
+  }
+
+  .silicon-hero-image {
+    border-radius: 0.9rem;
+  }
+
+  /* General */
+
+  .silicon-section {
+    padding: 4rem 2rem;
+  }
+
+  .silicon-section-label {
+    margin-bottom: 2.5rem;
+
+    font-size: 0.68rem;
+  }
+
+  .silicon-section-heading h2,
+  .silicon-lesson-heading h2 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .silicon-section-copy p,
+  .silicon-lesson-copy p {
+    font-size: 0.92rem;
+
+    line-height: 1.65;
+  }
+
+  /* Dark section */
+
+  .silicon-dark-section {
+    padding: 4rem 2rem;
+  }
+
+  .silicon-dark-content {
+    gap: 3rem;
+
+    padding: 4rem 0;
+  }
+
+  .silicon-dark-heading h2 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .silicon-dark-copy .silicon-dark-lead {
+    font-size: 1.05rem;
+  }
+
+  .silicon-quote {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 1rem;
+  }
+
+  .silicon-quote p {
+    font-size: 1.8rem;
+  }
+
+  /* Exhibition */
+
+  .silicon-exhibition-grid {
+    gap: 2.5rem;
+  }
+
+  .silicon-exhibition-image {
+    height: 320px;
+
+    border-radius: 0.8rem;
+  }
+
+  .silicon-exhibition-copy h2 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .silicon-exhibition-copy p {
+    font-size: 0.92rem;
+  }
+
+  /* Moment */
+
+  .silicon-moment {
+    padding: 5rem 2rem;
+  }
+
+  .silicon-moment h2 {
+    font-size: clamp(4rem, 18vw, 6rem);
+  }
+
+  .silicon-moment-copy {
+    margin-top: 3.5rem;
+  }
+
+  /* Winner */
+
+  .silicon-winner {
+    padding: 2rem;
+  }
+
+  .silicon-winner-top {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+
+  .silicon-winner-main {
+    padding: 6rem 0;
+  }
+
+  .silicon-winner-main h2 {
+    font-size: clamp(5rem, 24vw, 9rem);
+  }
+
+  .silicon-winner-text {
+    max-width: 18rem;
+
+    margin: 2.5rem auto 0;
+
+    font-size: 0.95rem;
+  }
+
+  /* Lesson */
+
+  .silicon-lesson-copy {
+    max-width: 100%;
+  }
+
+  /* Closing */
+
+  .silicon-closing {
+    padding: 6rem 2rem;
+  }
+
+  .silicon-closing h2 {
+    font-size: clamp(3.8rem, 16vw, 6rem);
+  }
+
+  .silicon-closing p {
+    max-width: 25rem;
+
+    font-size: 0.92rem;
+  }
+
+  /* Navigation */
+
+  .silicon-navigation {
+    padding: 2.5rem 2rem;
+
+    gap: 1rem;
+  }
+
+  .silicon-nav-prev,
+  .silicon-nav-next {
+    gap: 0.8rem;
+  }
+
+  .silicon-nav-prev i,
+  .silicon-nav-next i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .silicon-nav-prev span,
+  .silicon-nav-next span {
+    font-size: 0.6rem;
+  }
+
+  .silicon-nav-prev strong,
+  .silicon-nav-next strong {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .silicon-back {
+    padding: 1.5rem 2rem 0;
+  }
+
+  .silicon-hero {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .silicon-hero-title h1 {
+    font-size: clamp(3.4rem, 16vw, 5rem);
+  }
+
+  .silicon-section-heading h2,
+  .silicon-lesson-heading h2 {
+    font-size: clamp(3rem, 14vw, 4.2rem);
+  }
+
+  .silicon-dark-heading h2 {
+    font-size: clamp(3.8rem, 18vw, 5.5rem);
+  }
+
+  .silicon-moment h2 {
+    font-size: clamp(3.6rem, 18vw, 5.5rem);
+  }
+
+  .silicon-winner-main h2 {
+    font-size: clamp(4.5rem, 23vw, 7rem);
+  }
+
+  .silicon-closing h2 {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+
+  .silicon-navigation {
+    padding: 2rem;
+  }
+
+  .silicon-nav-prev strong,
+  .silicon-nav-next strong {
+    font-size: 0.9rem;
+  }
+}

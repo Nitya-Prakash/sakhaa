@@ -1,0 +1,876 @@
+/* journey/diksha.scss */
+
+#diksha-page {
+  background: #fef0d5;
+  color: #002f49;
+}
+
+/* ------------------------------------------------ */
+/* INTRO                                            */
+/* ------------------------------------------------ */
+
+.diksha-intro {
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  padding: 9rem 3rem 5rem;
+}
+
+.diksha-intro-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 47, 73, 0.2);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.diksha-intro-top span:first-child {
+  color: #780001;
+}
+
+.diksha-intro-top span:last-child {
+  color: rgba(0, 47, 73, 0.55);
+}
+
+/* ------------------------------------------------ */
+/* IMAGE SPACE                                      */
+/* ------------------------------------------------ */
+
+.diksha-image-space {
+  width: 100%;
+  height: min(58vw, 580px);
+
+  margin-top: 2rem;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    rgba(102, 155, 187, 0.2),
+    rgba(0, 47, 73, 0.08)
+  );
+
+  border-radius: 1rem;
+
+  border: 1px solid rgba(0, 47, 73, 0.12);
+}
+
+.diksha-image-space img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* ------------------------------------------------ */
+/* TITLE                                            */
+/* ------------------------------------------------ */
+
+.diksha-title {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+
+  gap: 5rem;
+
+  align-items: end;
+
+  padding-top: 3.5rem;
+}
+
+.story-kicker {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: #c01221;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+.diksha-title h1 {
+  margin: 0;
+
+  font-size: clamp(3.8rem, 7vw, 7rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.065em;
+}
+
+.diksha-title h1 span {
+  color: #c01221;
+}
+
+.diksha-title > p {
+  max-width: 22rem;
+
+  margin: 0 0 0.5rem;
+
+  color: rgba(0, 47, 73, 0.65);
+
+  font-size: 1rem;
+
+  line-height: 1.55;
+}
+
+/* ------------------------------------------------ */
+/* STORY                                            */
+/* ------------------------------------------------ */
+
+.diksha-story {
+  width: 100%;
+}
+
+.story-block {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 5rem 3rem;
+
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+
+  gap: 2.5rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.18);
+}
+
+.story-index {
+  padding-top: 0.35rem;
+
+  color: #c01221;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+.story-content {
+  max-width: 70rem;
+}
+
+.story-lead {
+  max-width: 52rem;
+
+  margin: 0 0 2rem;
+
+  font-size: clamp(1.8rem, 3vw, 3rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+}
+
+.story-content > p {
+  max-width: 54rem;
+
+  margin: 0 0 1.25rem;
+
+  color: rgba(0, 47, 73, 0.72);
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+}
+
+/* ------------------------------------------------ */
+/* SMALLER SECTION HEADINGS                         */
+/* ------------------------------------------------ */
+
+.story-heading-row {
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+
+  gap: 2rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.story-heading-row > span {
+  padding-top: 0.35rem;
+
+  color: #780001;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.story-heading-row h2 {
+  max-width: 46rem;
+
+  margin: 0;
+
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.story-heading-row h2 em {
+  color: #c01221;
+  font-style: normal;
+}
+
+/* ------------------------------------------------ */
+/* NOTE                                             */
+/* ------------------------------------------------ */
+
+.story-note {
+  max-width: 48rem;
+
+  margin-top: 2.5rem;
+
+  padding: 1.3rem 1.5rem;
+
+  border-left: 2px solid #c01221;
+
+  background: rgba(102, 155, 187, 0.08);
+}
+
+.story-note span {
+  display: block;
+
+  margin-bottom: 0.65rem;
+
+  color: #780001;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+.story-note p {
+  margin: 0;
+
+  color: #002f49;
+
+  font-size: 0.95rem;
+
+  line-height: 1.55;
+}
+
+/* ------------------------------------------------ */
+/* HIGHLIGHT SECTION                                */
+/* ------------------------------------------------ */
+
+.story-block-highlight {
+  background: #f7f7f5;
+
+  border-top-color: transparent;
+}
+
+.story-block-highlight .story-content {
+  padding-right: 3rem;
+}
+
+/* ------------------------------------------------ */
+/* DARK SECTION                                     */
+/* ------------------------------------------------ */
+
+.story-block-dark {
+  width: 100%;
+  max-width: none;
+
+  padding-left: max(3rem, calc((100vw - 94rem) / 2));
+  padding-right: max(3rem, calc((100vw - 94rem) / 2));
+
+  background: #002f49;
+
+  color: #fef0d5;
+
+  border-top: none;
+}
+
+.story-block-dark .story-content {
+  max-width: 75rem;
+}
+
+.story-block-dark .story-index {
+  color: #669bbb;
+}
+
+.story-block-dark .story-heading-row > span {
+  color: #669bbb;
+}
+
+.story-block-dark .story-heading-row h2 {
+  color: #fef0d5;
+}
+
+.story-block-dark .story-heading-row h2 em {
+  color: #c01221;
+}
+
+/* ------------------------------------------------ */
+/* DESIGN POINTS                                    */
+/* ------------------------------------------------ */
+
+.design-points {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(254, 240, 213, 0.2);
+}
+
+.design-point {
+  display: grid;
+
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+
+  gap: 1rem;
+
+  padding: 1.4rem 1rem 1.4rem 0;
+
+  border-bottom: 1px solid rgba(254, 240, 213, 0.2);
+}
+
+.design-point:nth-child(odd) {
+  border-right: 1px solid rgba(254, 240, 213, 0.2);
+  padding-right: 2rem;
+}
+
+.design-point:nth-child(even) {
+  padding-left: 2rem;
+}
+
+.design-point > span {
+  color: #c01221;
+
+  font-size: 0.8rem;
+}
+
+.design-point strong {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  color: #fef0d5;
+
+  font-size: 1.15rem;
+
+  font-weight: 400;
+}
+
+.design-point p {
+  max-width: 24rem;
+
+  margin: 0;
+
+  color: rgba(254, 240, 213, 0.58);
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+/* ------------------------------------------------ */
+/* SPLIT CONTENT                                    */
+/* ------------------------------------------------ */
+
+.story-block-split .story-content {
+  max-width: 76rem;
+}
+
+.split-columns {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 4rem;
+}
+
+.split-columns > div {
+  padding-top: 1.3rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.18);
+}
+
+.split-columns p {
+  max-width: 30rem;
+
+  margin: 0 0 1.2rem;
+
+  color: rgba(0, 47, 73, 0.72);
+
+  font-size: 1rem;
+
+  line-height: 1.65;
+}
+
+/* ------------------------------------------------ */
+/* TAKEAWAY                                         */
+/* ------------------------------------------------ */
+
+.diksha-takeaway {
+  width: 100%;
+
+  padding: 6rem max(3rem, calc((100vw - 94rem) / 2));
+
+  display: grid;
+
+  grid-template-columns: 13rem minmax(0, 1fr);
+
+  gap: 3rem;
+
+  background: #669bbb;
+
+  color: #002f49;
+}
+
+.takeaway-label {
+  padding-top: 0.5rem;
+}
+
+.takeaway-label span {
+  color: #002f49;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.takeaway-content {
+  max-width: 68rem;
+}
+
+.takeaway-content p {
+  max-width: 52rem;
+
+  margin: 0 0 1.3rem;
+
+  font-size: 1rem;
+
+  line-height: 1.65;
+}
+
+.takeaway-main {
+  max-width: 55rem !important;
+
+  margin: 2rem 0 !important;
+
+  font-size: clamp(2rem, 3.4vw, 3.5rem) !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: -0.045em;
+}
+
+.takeaway-main span {
+  color: #c01221;
+}
+
+/* ------------------------------------------------ */
+/* CLOSING                                          */
+/* ------------------------------------------------ */
+
+.diksha-closing {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 7rem 3rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 3rem;
+}
+
+.closing-small {
+  max-width: 13rem;
+
+  margin: 0;
+
+  color: #780001;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  letter-spacing: 0.1em;
+}
+
+.closing-text {
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  font-weight: 400;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.06em;
+
+  text-align: right;
+}
+
+.closing-text span {
+  color: #c01221;
+}
+
+/* ------------------------------------------------ */
+/* BACK TO JOURNEY                                  */
+/* ------------------------------------------------ */
+
+.diksha-back {
+  width: 100%;
+
+  padding: 2.5rem 3rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.diksha-back a {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.2rem;
+
+  color: #002f49;
+
+  text-decoration: none;
+}
+
+.diksha-back i {
+  width: 2.8rem;
+  height: 2.8rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.diksha-back a:hover i {
+  background: #002f49;
+  color: #fef0d5;
+
+  transform: translateX(-4px);
+}
+
+.diksha-back a > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.25rem;
+}
+
+.diksha-back span {
+  color: #780001;
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+.diksha-back strong {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------ */
+/* TABLET                                           */
+/* ------------------------------------------------ */
+
+@media (max-width: 900px) {
+  .diksha-intro {
+    padding: 8rem 2.5rem 4rem;
+  }
+
+  .diksha-title {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .diksha-title > p {
+    max-width: 32rem;
+  }
+
+  .story-block {
+    padding: 4rem 2.5rem;
+
+    grid-template-columns: 3rem minmax(0, 1fr);
+
+    gap: 1.5rem;
+  }
+
+  .story-heading-row {
+    grid-template-columns: 10rem minmax(0, 1fr);
+  }
+
+  .diksha-takeaway {
+    padding: 5rem 2.5rem;
+
+    grid-template-columns: 10rem minmax(0, 1fr);
+
+    gap: 2rem;
+  }
+
+  .diksha-closing {
+    padding: 6rem 2.5rem;
+  }
+
+  .diksha-back {
+    padding: 2.5rem;
+  }
+}
+
+/* ------------------------------------------------ */
+/* MOBILE                                           */
+/* ------------------------------------------------ */
+
+@media (max-width: 700px) {
+  .diksha-intro {
+    padding: 7.5rem 2rem 3.5rem;
+  }
+
+  .diksha-intro-top {
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    font-size: 0.62rem;
+  }
+
+  .diksha-intro-top span:last-child {
+    text-align: right;
+  }
+
+  .diksha-image-space {
+    height: 70vw;
+
+    min-height: 250px;
+    max-height: 380px;
+
+    margin-top: 1.5rem;
+
+    border-radius: 0.8rem;
+  }
+
+  .diksha-title {
+    padding-top: 2.5rem;
+
+    gap: 1.5rem;
+  }
+
+  .story-kicker {
+    font-size: 0.68rem;
+  }
+
+  .diksha-title h1 {
+    font-size: clamp(3.1rem, 14vw, 5rem);
+
+    line-height: 0.88;
+  }
+
+  .diksha-title > p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .story-block {
+    padding: 3.5rem 2rem;
+
+    display: block;
+  }
+
+  .story-index {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.68rem;
+  }
+
+  .story-content {
+    max-width: none;
+  }
+
+  .story-lead {
+    font-size: 1.8rem;
+
+    line-height: 1.05;
+  }
+
+  .story-content > p {
+    font-size: 0.92rem;
+
+    line-height: 1.65;
+  }
+
+  .story-heading-row {
+    display: block;
+
+    margin-bottom: 2rem;
+  }
+
+  .story-heading-row > span {
+    display: block;
+
+    margin-bottom: 0.9rem;
+
+    font-size: 0.63rem;
+  }
+
+  .story-heading-row h2 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+
+    line-height: 1;
+  }
+
+  .story-note {
+    margin-top: 2rem;
+
+    padding: 1.1rem 1rem;
+  }
+
+  .story-block-highlight .story-content {
+    padding-right: 0;
+  }
+
+  .design-points {
+    grid-template-columns: 1fr;
+  }
+
+  .design-point,
+  .design-point:nth-child(odd),
+  .design-point:nth-child(even) {
+    padding: 1.25rem 0;
+
+    border-right: none;
+  }
+
+  .split-columns {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+  .split-columns > div {
+    padding-top: 1.2rem;
+  }
+
+  .diksha-takeaway {
+    padding: 4rem 2rem;
+
+    display: block;
+  }
+
+  .takeaway-label {
+    margin-bottom: 2rem;
+  }
+
+  .takeaway-content p {
+    font-size: 0.92rem;
+  }
+
+  .takeaway-main {
+    font-size: clamp(1.9rem, 9vw, 2.8rem) !important;
+  }
+
+  .diksha-closing {
+    padding: 4.5rem 2rem;
+
+    display: block;
+  }
+
+  .closing-small {
+    margin-bottom: 2rem;
+  }
+
+  .closing-text {
+    font-size: clamp(3rem, 14vw, 5rem);
+
+    text-align: left;
+  }
+
+  .diksha-back {
+    padding: 2rem;
+  }
+
+  .diksha-back a {
+    gap: 0.9rem;
+  }
+
+  .diksha-back i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .diksha-back strong {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------------------------------------ */
+/* SMALL PHONES                                     */
+/* ------------------------------------------------ */
+
+@media (max-width: 480px) {
+  .diksha-intro {
+    padding: 7rem 2rem 3rem;
+  }
+
+  .diksha-image-space {
+    min-height: 220px;
+  }
+
+  .story-block {
+    padding: 3rem 2rem;
+  }
+
+  .story-heading-row h2 {
+    font-size: 1.85rem;
+  }
+
+  .diksha-takeaway {
+    padding: 3.5rem 2rem;
+  }
+
+  .diksha-closing {
+    padding: 4rem 2rem;
+  }
+}

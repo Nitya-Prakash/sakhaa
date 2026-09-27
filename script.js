@@ -9,17 +9,61 @@ import "swiper/css/pagination";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const heroTimeline = gsap.timeline();
+/* =========================================================
+   HERO
+========================================================= */
 
-// NAVBAR SCROLL EFFECT
+function initHero() {
+  const heroTimeline = gsap.timeline();
 
-// =====================================
-// NAVBAR SCROLL EFFECT
-// =====================================
+  heroTimeline
+    .from("#navbar", {
+      y: -30,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    })
+    .from(
+      "#hero h1 span",
+      {
+        y: 150,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.09,
+        ease: "power4.out",
+      },
+      "-=0.3",
+    )
+    .from(
+      "#hero .scroll-icon",
+      {
+        y: 30,
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.6,
+        ease: "power3.out",
+      },
+      "-=0.4",
+    );
 
-const navbar = document.querySelector("#navbar");
+  gsap.to("#hero .scroll-icon", {
+    y: 8,
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut",
+  });
+}
 
-if (navbar) {
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+function initNavbar() {
+  const navbar = document.querySelector("#navbar");
+
+  if (!navbar) return;
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar.classList.add("navbar-scrolled");
@@ -29,14 +73,16 @@ if (navbar) {
   });
 }
 
-// =====================================
-// MOBILE MENU
-// =====================================
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-const menuToggle = document.querySelector("#menu-toggle");
-const mobileMenu = document.querySelector("#mobile-menu");
+function initMobileMenu() {
+  const menuToggle = document.querySelector("#menu-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
 
-if (menuToggle && mobileMenu) {
+  if (!menuToggle || !mobileMenu) return;
+
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.classList.toggle("active");
 
@@ -49,11 +95,8 @@ if (menuToggle && mobileMenu) {
       isOpen ? "Close navigation menu" : "Open navigation menu",
     );
 
-    // Prevent background page scrolling
     document.body.style.overflow = isOpen ? "hidden" : "";
   });
-
-  // Close menu when link is clicked
 
   document.querySelectorAll("#mobile-menu a").forEach((link) => {
     link.addEventListener("click", () => {
@@ -70,364 +113,313 @@ if (menuToggle && mobileMenu) {
   });
 }
 
-heroTimeline
-  .from("#navbar", {
-    y: -30,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-  })
+/* =========================================================
+   PROBLEM / WHAT IS SAKHAA
+========================================================= */
 
-  .from(
-    "#hero h1 span",
-    {
-      y: 150,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.09,
-      ease: "power4.out",
+function initProblem() {
+  const problem = document.querySelector("#problem");
+
+  if (!problem) return;
+
+  const problemTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#problem",
+      start: "top 75%",
+      end: "bottom 85%",
+      scrub: 1,
     },
-    "-=0.3",
-  )
+  });
 
-  .from(
-    ".scroll-icon",
-    {
-      y: 30,
+  problemTimeline
+    .from("#problem .problem-label", {
+      y: 20,
       opacity: 0,
-      scale: 0.8,
-      duration: 0.6,
+      duration: 0.5,
       ease: "power3.out",
+    })
+    .from(
+      "#problem .problem-intro",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+      },
+      "-=0.25",
+    )
+    .from(
+      "#problem .problem-copy p",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: "power3.out",
+      },
+      "-=0.35",
+    )
+    .from(
+      "#problem .problem-image",
+      {
+        opacity: 0,
+        scale: 0.97,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.45",
+    )
+    .from(
+      "#problem .problem-bottom",
+      {
+        opacity: 0,
+        y: 15,
+        duration: 0.5,
+        ease: "power3.out",
+      },
+      "-=0.3",
+    );
+}
+
+/* =========================================================
+   WHY SAKHAA — INTRO
+========================================================= */
+
+function initWhyIntro() {
+  const whyIntroSection = document.querySelector("#why-sakhaa .why-intro");
+
+  if (!whyIntroSection) return;
+
+  const whyIntro = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#why-sakhaa .why-intro",
+      start: "top 70%",
+      end: "bottom 75%",
+      scrub: 1,
     },
-    "-=0.4",
+  });
+
+  whyIntro
+    .from("#why-sakhaa .why-section-label", {
+      y: 20,
+      opacity: 0,
+      duration: 0.5,
+    })
+    .from(
+      "#why-sakhaa .why-intro-heading h2",
+      {
+        y: 80,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "-=0.2",
+    )
+    .from(
+      "#why-sakhaa .why-intro-heading h3",
+      {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "-=0.5",
+    )
+    .from(
+      "#why-sakhaa .why-intro-footer",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+      },
+      "-=0.4",
+    );
+}
+
+/* =========================================================
+   WHY SAKHAA — MOVEMENT
+========================================================= */
+
+function initMovement() {
+  const movementSection = document.querySelector(
+    "#why-sakhaa .movement-section",
   );
 
-gsap.to(".scroll-icon", {
-  y: 8,
-  duration: 1,
-  repeat: -1,
-  yoyo: true,
-  ease: "power1.inOut",
-});
+  if (!movementSection) return;
 
-const problemTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#problem",
-    start: "top 75%",
-    end: "bottom 85%",
-    scrub: 1,
-  },
-});
-
-problemTimeline
-  .from("#problem .problem-label", {
-    y: 20,
-    opacity: 0,
-    duration: 0.5,
-    ease: "power3.out",
-  })
-  .from(
-    "#problem .problem-intro",
-    {
-      y: 30,
-      opacity: 0,
-      duration: 0.7,
-      ease: "power3.out",
+  const movement = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#why-sakhaa .movement-section",
+      start: "top 70%",
+      end: "center center",
+      scrub: 1,
     },
-    "-=0.25",
-  )
-  .from(
-    "#problem .problem-copy p",
-    {
+  });
+
+  movement
+    .from("#why-sakhaa .movement-image", {
+      clipPath: "inset(8% 8% 8% 8%)",
+      scale: 1.05,
+      duration: 1.2,
+      ease: "power3.out",
+    })
+    .from(
+      "#why-sakhaa .image-number",
+      {
+        y: 80,
+        opacity: 0,
+        duration: 0.6,
+      },
+      "-=0.7",
+    )
+    .from(
+      "#why-sakhaa .image-note",
+      {
+        opacity: 0,
+        x: 20,
+        duration: 0.5,
+        stagger: 0.15,
+      },
+      "-=0.5",
+    )
+    .from(
+      "#why-sakhaa .movement-label",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.7",
+    )
+    .from(
+      "#why-sakhaa .movement-copy h2",
+      {
+        y: 70,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "-=0.3",
+    )
+    .from(
+      "#why-sakhaa .movement-lead",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.4",
+    )
+    .from(
+      "#why-sakhaa .movement-option",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.12,
+      },
+      "-=0.2",
+    );
+}
+
+/* =========================================================
+   WHY SAKHAA — SAFETY
+========================================================= */
+
+function initSafety() {
+  const safetySection = document.querySelector("#why-sakhaa .safety-section");
+
+  if (!safetySection) return;
+
+  const safetyTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#why-sakhaa .safety-section",
+      start: "top 80%",
+      end: "bottom 85%",
+      scrub: 1,
+    },
+  });
+
+  safetyTimeline
+    .from("#why-sakhaa .safety-top", {
       y: 25,
       opacity: 0,
       duration: 0.6,
-      stagger: 0.12,
-      ease: "power3.out",
-    },
-    "-=0.35",
-  )
-  .from(
-    "#problem .problem-image",
-    {
-      opacity: 0,
-      scale: 0.97,
-      duration: 0.8,
-      ease: "power3.out",
-    },
-    "-=0.45",
-  )
-  .from(
-    "#problem .problem-bottom",
-    {
-      opacity: 0,
-      y: 15,
-      duration: 0.5,
-      ease: "power3.out",
-    },
-    "-=0.3",
-  );
+    })
+    .from(
+      "#why-sakhaa .safety-heading h2",
+      {
+        y: 90,
+        opacity: 0,
+        duration: 0.9,
+      },
+      "-=0.3",
+    )
+    .from(
+      "#why-sakhaa .safety-heading p",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.5",
+    )
+    .from(
+      "#why-sakhaa .safety-product-image",
+      {
+        clipPath: "inset(8% 8% 8% 8%)",
+        scale: 1.06,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.7",
+    )
+    .from(
+      "#why-sakhaa .safety-product-mark",
+      {
+        y: 30,
+        opacity: 0,
+        duration: 0.4,
+      },
+      "-=0.5",
+    )
+    .from(
+      "#why-sakhaa .safety-feature",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2,
+      },
+      "-=0.5",
+    )
+    .from(
+      "#why-sakhaa .safety-sequence",
+      {
+        y: 20,
+        opacity: 0,
+        duration: 0.5,
+      },
+      "-=0.3",
+    )
+    .from(
+      "#why-sakhaa .safety-bottom",
+      {
+        y: 20,
+        opacity: 0,
+        duration: 0.4,
+      },
+      "-=0.2",
+    );
+}
 
-// ABOUT SECTION
+/* =========================================================
+   AWARENESS
+========================================================= */
 
-// =========================================
-// WHY SAKHAA — INTRO
-// =========================================
+function initAwareness() {
+  const awareness = document.querySelector("#awareness");
 
-const whyIntro = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#why-sakhaa .why-intro",
-    start: "top 70%",
-    end: "bottom 75%",
-    scrub: 1,
-  },
-});
+  if (!awareness) return;
 
-whyIntro
-  .from("#why-sakhaa .why-section-label", {
-    y: 20,
-    opacity: 0,
-    duration: 0.5,
-  })
-  .from(
-    "#why-sakhaa .why-intro-heading h2",
-    {
-      y: 80,
-      opacity: 0,
-      duration: 0.8,
-    },
-    "-=0.2",
-  )
-  .from(
-    "#why-sakhaa .why-intro-heading h3",
-    {
-      y: 60,
-      opacity: 0,
-      duration: 0.8,
-    },
-    "-=0.5",
-  )
-  .from(
-    "#why-sakhaa .why-intro-footer",
-    {
-      y: 30,
-      opacity: 0,
-      duration: 0.6,
-    },
-    "-=0.4",
-  );
-
-// =========================================
-// MOVEMENT
-// =========================================
-
-const movement = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#why-sakhaa .movement-section",
-    start: "top 70%",
-    end: "center center",
-    scrub: 1,
-  },
-});
-
-// IMAGE
-
-movement.from("#why-sakhaa .movement-image", {
-  clipPath: "inset(8% 8% 8% 8%)",
-  scale: 1.05,
-  duration: 1.2,
-  ease: "power3.out",
-});
-
-// IMAGE NUMBER
-
-movement.from(
-  "#why-sakhaa .image-number",
-  {
-    y: 80,
-    opacity: 0,
-    duration: 0.6,
-  },
-  "-=0.7",
-);
-
-// NOTES
-
-movement.from(
-  "#why-sakhaa .image-note",
-  {
-    opacity: 0,
-    x: 20,
-    duration: 0.5,
-    stagger: 0.15,
-  },
-  "-=0.5",
-);
-
-// LABEL
-
-movement.from(
-  "#why-sakhaa .movement-label",
-  {
-    y: 30,
-    opacity: 0,
-    duration: 0.5,
-  },
-  "-=0.7",
-);
-
-// HEADING
-
-movement.from(
-  "#why-sakhaa .movement-copy h2",
-  {
-    y: 70,
-    opacity: 0,
-    duration: 0.8,
-  },
-  "-=0.3",
-);
-
-// DESCRIPTION
-
-movement.from(
-  "#why-sakhaa .movement-lead",
-  {
-    y: 30,
-    opacity: 0,
-    duration: 0.5,
-  },
-  "-=0.4",
-);
-
-// OPTIONS
-
-movement.from(
-  "#why-sakhaa .movement-option",
-  {
-    y: 25,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.12,
-  },
-  "-=0.2",
-);
-
-// =========================================
-// WHY SAKHAA — SAFETY
-// =========================================
-
-const safetyTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#why-sakhaa .safety-section",
-    start: "top 70%",
-    end: "bottom 70%",
-    scrub: 1,
-  },
-});
-
-// TOP
-
-safetyTimeline.from("#why-sakhaa .safety-top", {
-  y: 25,
-  opacity: 0,
-  duration: 0.6,
-});
-
-// HEADING
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-heading h2",
-  {
-    y: 90,
-    opacity: 0,
-    duration: 0.9,
-  },
-  "-=0.3",
-);
-
-// HEADING DESCRIPTION
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-heading p",
-  {
-    y: 30,
-    opacity: 0,
-    duration: 0.5,
-  },
-  "-=0.5",
-);
-
-// PRODUCT IMAGE
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-product-image",
-  {
-    clipPath: "inset(8% 8% 8% 8%)",
-    scale: 1.06,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  },
-  "-=0.7",
-);
-
-// PRODUCT MARK
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-product-mark",
-  {
-    y: 30,
-    opacity: 0,
-    duration: 0.4,
-  },
-  "-=0.5",
-);
-
-// FEATURES
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-feature",
-  {
-    y: 25,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.2,
-  },
-  "-=0.5",
-);
-
-// SEQUENCE
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-sequence",
-  {
-    y: 20,
-    opacity: 0,
-    duration: 0.5,
-  },
-  "-=0.3",
-);
-
-// BOTTOM
-
-safetyTimeline.from(
-  "#why-sakhaa .safety-bottom",
-  {
-    y: 20,
-    opacity: 0,
-    duration: 0.4,
-  },
-  "-=0.2",
-);
-
-/* =========================================
-   03 / AWARENESS ANIMATION
-========================================= */
-
-const awareness = document.querySelector("#awareness");
-
-if (awareness) {
   const label = awareness.querySelector(".awareness-label");
 
   const items = gsap.utils.toArray(
@@ -435,10 +427,6 @@ if (awareness) {
   );
 
   const closing = awareness.querySelector(".awareness-closing");
-
-  /* -----------------------------------------
-     INITIAL STATES
-  ----------------------------------------- */
 
   gsap.set(label, {
     opacity: 0,
@@ -455,10 +443,6 @@ if (awareness) {
     y: 30,
   });
 
-  /* -----------------------------------------
-     TIMELINE
-  ----------------------------------------- */
-
   const awarenessTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: awareness,
@@ -467,76 +451,62 @@ if (awareness) {
     },
   });
 
-  /* Label */
-
-  awarenessTimeline.to(label, {
-    opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "power2.out",
-  });
-
-  /* Questions */
-
-  awarenessTimeline.to(
-    items,
-    {
+  awarenessTimeline
+    .to(label, {
       opacity: 1,
       y: 0,
-      duration: 0.7,
-      stagger: 0.15,
-      ease: "power3.out",
-    },
-    "-=0.2",
-  );
-
-  /* Closing */
-
-  awarenessTimeline.to(
-    closing,
-    {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
+      duration: 0.5,
       ease: "power2.out",
-    },
-    "+=0.2",
-  );
+    })
+    .to(
+      items,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: "power3.out",
+      },
+      "-=0.2",
+    )
+    .to(
+      closing,
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power2.out",
+      },
+      "+=0.2",
+    );
 }
 
-/* =========================================
-   04 / CONNECTION
-========================================= */
+/* =========================================================
+   CONNECTION / CAREGIVER DASHBOARD
+========================================================= */
 
-const connectionSection = document.querySelector("#connection");
+function initConnection() {
+  const connectionSection = document.querySelector("#connection");
 
-if (connectionSection) {
-  /* -----------------------------------------
-     HEALTH VALUES
-  ----------------------------------------- */
+  if (!connectionSection) return;
 
   const heartRate = connectionSection.querySelector("#heart-rate");
-
   const spo2 = connectionSection.querySelector("#spo2");
-
   const pulse = connectionSection.querySelector("#pulse");
-
   const locationTime = connectionSection.querySelector("#location-time");
 
   /* -----------------------------------------
-     SIMULATED LIVE DATA
-     
-     IMPORTANT:
+     SIMULATED HEALTH DATA
+
      This is only for the website demonstration.
+
      Replace these values with WebSocket/API/
      MQTT data from the actual wheelchair later.
   ----------------------------------------- */
 
   function updateHealthData() {
     const newHeartRate = Math.floor(72 + Math.random() * 7);
-
     const newPulse = Math.floor(70 + Math.random() * 7);
-
     const newSpO2 = Math.floor(97 + Math.random() * 2);
 
     if (heartRate) {
@@ -552,7 +522,7 @@ if (connectionSection) {
     }
   }
 
-  /* Update every 4 seconds */
+  updateHealthData();
 
   setInterval(updateHealthData, 4000);
 
@@ -565,6 +535,8 @@ if (connectionSection) {
 
     locationTime.textContent = "Just now";
   }
+
+  updateLocationTime();
 
   setInterval(updateLocationTime, 5000);
 
@@ -611,7 +583,6 @@ if (connectionSection) {
   if (acknowledgeButton) {
     acknowledgeButton.addEventListener("click", () => {
       acknowledgeButton.textContent = "Request Acknowledged";
-
       acknowledgeButton.style.opacity = "0.65";
     });
   }
@@ -680,13 +651,15 @@ if (connectionSection) {
     );
 }
 
-/* =========================================
-   ACCESSIBILITY ANIMATION
-========================================= */
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
 
-const accessibility = document.querySelector("#accessibility");
+function initAccessibility() {
+  const accessibility = document.querySelector("#accessibility");
 
-if (accessibility) {
+  if (!accessibility) return;
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: accessibility,
@@ -700,86 +673,103 @@ if (accessibility) {
     opacity: 0,
     duration: 0.5,
     ease: "power2.out",
-  });
-
-  tl.from(
-    ".accessibility-heading h2",
-    {
-      y: 60,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out",
-    },
-    "-=0.2",
-  );
-
-  tl.from(
-    ".accessibility-intro",
-    {
-      y: 25,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    },
-    "-=0.4",
-  );
-
-  tl.from(
-    ".accessibility-image",
-    {
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out",
-    },
-    "-=0.2",
-  );
-
-  tl.from(
-    ".info-item",
-    {
-      y: 20,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: "power2.out",
-    },
-    "-=0.5",
-  );
-
-  tl.from(
-    ".affordability",
-    {
-      y: 25,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    },
-    "-=0.2",
-  );
-
-  tl.from(
-    ".accessibility-closing",
-    {
-      y: 25,
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    },
-    "-=0.2",
-  );
+  })
+    .from(
+      ".accessibility-heading h2",
+      {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.2",
+    )
+    .from(
+      ".accessibility-intro",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "-=0.4",
+    )
+    .from(
+      ".accessibility-image",
+      {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+      },
+      "-=0.2",
+    )
+    .from(
+      ".info-item",
+      {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.5,
+        ease: "power2.out",
+      },
+      "-=0.5",
+    )
+    .from(
+      ".affordability",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "-=0.2",
+    )
+    .from(
+      ".accessibility-closing",
+      {
+        y: 25,
+        opacity: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      "-=0.2",
+    );
 }
 
-/* =========================================
+/* =========================================================
    JOURNEY SWIPER
-========================================= */
+========================================================= */
 
-const journeySwiperElement = document.querySelector(".journey-swiper");
+function initJourney() {
+  const journeySwiperElement = document.querySelector(".journey-swiper");
 
-if (journeySwiperElement) {
+  if (!journeySwiperElement) return;
+
   const journeyCurrent = document.querySelector(".journey-current");
+  const journeyTotal = document.querySelector(".journey-total");
+  const journeyProgress = document.querySelector(".journey-progress-line");
 
-  const journeySwiper = new Swiper(".journey-swiper", {
+  function updateJourneyProgress(swiper) {
+    const current = swiper.realIndex + 1;
+    const total = swiper.slides.length;
+
+    if (journeyCurrent) {
+      journeyCurrent.textContent = String(current).padStart(2, "0");
+    }
+
+    if (journeyTotal) {
+      journeyTotal.textContent = String(total).padStart(2, "0");
+    }
+
+    if (journeyProgress) {
+      const progress = total > 1 ? ((current - 1) / (total - 1)) * 100 : 100;
+
+      journeyProgress.style.setProperty("--progress", `${progress}%`);
+    }
+  }
+
+  new Swiper(".journey-swiper", {
     modules: [Navigation],
 
     slidesPerView: "auto",
@@ -813,50 +803,51 @@ if (journeySwiperElement) {
 
     on: {
       init: function () {
-        if (journeyCurrent) {
-          journeyCurrent.textContent = String(this.realIndex + 1).padStart(
-            2,
-            "0",
-          );
-        }
+        updateJourneyProgress(this);
       },
 
       slideChange: function () {
-        if (journeyCurrent) {
-          journeyCurrent.textContent = String(this.realIndex + 1).padStart(
-            2,
-            "0",
-          );
-        }
+        updateJourneyProgress(this);
       },
     },
   });
 }
 
-/* =========================================
-   CONTACT - REQUEST A CALL BACK
-========================================= */
+/* =========================================================
+   CONTACT — REQUEST A CALL BACK
+========================================================= */
 
-const callbackTrigger = document.querySelector("#callback-trigger");
-const callbackTriggerText = document.querySelector("#callback-trigger-text");
-const callbackTriggerIcon = document.querySelector("#callback-trigger-icon");
+function initContact() {
+  const callbackTrigger = document.querySelector("#callback-trigger");
 
-const callbackFormWrapper = document.querySelector("#callback-form-wrapper");
+  const callbackTriggerText = document.querySelector("#callback-trigger-text");
 
-const callbackForm = document.querySelector("#callback-form");
+  const callbackTriggerIcon = document.querySelector("#callback-trigger-icon");
 
-const callbackSubmit = document.querySelector("#callback-submit");
+  const callbackFormWrapper = document.querySelector("#callback-form-wrapper");
 
-const callbackSubmitText = document.querySelector("#callback-submit-text");
+  const callbackForm = document.querySelector("#callback-form");
 
-const callbackSuccess = document.querySelector("#callback-success");
+  const callbackSubmit = document.querySelector("#callback-submit");
 
-if (callbackTrigger && callbackFormWrapper && callbackForm && callbackSuccess) {
+  const callbackSubmitText = document.querySelector("#callback-submit-text");
+
+  const callbackSuccess = document.querySelector("#callback-success");
+
+  if (
+    !callbackTrigger ||
+    !callbackFormWrapper ||
+    !callbackForm ||
+    !callbackSuccess
+  ) {
+    return;
+  }
+
   let isFormOpen = false;
 
-  /* =========================================
+  /* -----------------------------------------
      OPEN / CLOSE FORM
-  ========================================= */
+  ----------------------------------------- */
 
   callbackTrigger.addEventListener("click", () => {
     if (!isFormOpen) {
@@ -896,63 +887,44 @@ if (callbackTrigger && callbackFormWrapper && callbackForm && callbackSuccess) {
     }
   });
 
-  /* =========================================
+  /* -----------------------------------------
      FORM SUBMISSION
-  ========================================= */
+  ----------------------------------------- */
 
   callbackForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    /* Prevent double submission */
-
-    if (callbackSubmit.classList.contains("is-loading")) {
+    if (callbackSubmit && callbackSubmit.classList.contains("is-loading")) {
       return;
     }
-
-    /* Loading state */
 
     callbackSubmit.classList.add("is-loading");
 
     callbackSubmitText.textContent = "SENDING...";
 
     try {
-      /*
-       * Replace these with your actual
-       * EmailJS Service ID and Template ID.
-       *
-       * EmailJS public key is initialized
-       * in index.html.
-       */
-
       await emailjs.sendForm(
         "service_4ya35b5",
         "template_ok985id",
         callbackForm,
       );
 
-      /* =====================================
+      /* -----------------------------------------
          SUCCESS
-      ===================================== */
+      ----------------------------------------- */
 
       callbackSubmitText.textContent = "SENT";
-
-      /*
-       * First close the form.
-       */
 
       gsap.to(callbackFormWrapper, {
         height: 0,
         opacity: 0,
         duration: 0.55,
         ease: "power3.inOut",
+
         onComplete: () => {
           isFormOpen = false;
 
           callbackTrigger.style.display = "none";
-
-          /*
-           * Show success message
-           */
 
           callbackSuccess.style.display = "block";
 
@@ -972,10 +944,6 @@ if (callbackTrigger && callbackFormWrapper && callbackForm && callbackSuccess) {
         },
       });
 
-      /*
-       * Clear form
-       */
-
       callbackForm.reset();
     } catch (error) {
       console.error("Callback request failed:", error);
@@ -988,3 +956,24 @@ if (callbackTrigger && callbackFormWrapper && callbackForm && callbackSuccess) {
     }
   });
 }
+
+initNavbar();
+initMobileMenu();
+
+initHero();
+
+initProblem();
+
+initWhyIntro();
+initMovement();
+initSafety();
+
+initAwareness();
+
+initConnection();
+
+initAccessibility();
+
+initJourney();
+
+initContact();

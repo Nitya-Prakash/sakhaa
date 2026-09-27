@@ -1,0 +1,1396 @@
+#inspiration-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #fef0d5;
+  color: #002f49;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BACK TO JOURNEY
+========================= */
+
+.article-back {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+  padding: 2rem 3rem 0;
+}
+
+.article-back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  color: #002f49;
+  text-decoration: none;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+.article-back a i {
+  font-size: 1rem;
+
+  transition: transform 0.3s ease;
+}
+
+.article-back a:hover {
+  color: #c01221;
+}
+
+.article-back a:hover i {
+  transform: translateX(-4px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.inspiration-hero {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+  padding: 4rem 3rem 7rem;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(0, 47, 73, 0.18);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-meta span:first-child {
+  color: #c01221;
+}
+
+.hero-meta span:last-child {
+  color: #780001;
+}
+
+.hero-heading {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+
+  gap: 5rem;
+
+  align-items: end;
+
+  padding: 4rem 0 4.5rem;
+}
+
+.hero-heading h1 {
+  margin: 0;
+
+  max-width: 55rem;
+
+  font-size: clamp(4.5rem, 8vw, 8rem);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.075em;
+}
+
+.hero-heading p {
+  max-width: 20rem;
+
+  margin: 0 0 0.5rem;
+
+  font-size: 1.05rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+.hero-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 1.2rem;
+
+  background: #669bbb;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  max-height: 700px;
+
+  object-fit: cover;
+}
+
+/* =========================
+   GENERAL STORY
+========================= */
+
+.story-section {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 7rem 3rem;
+}
+
+.story-index {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+
+  margin-bottom: 3.5rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.story-index span {
+  color: #c01221;
+}
+
+.story-index p {
+  margin: 0;
+
+  color: #780001;
+}
+
+.story-content {
+  width: 100%;
+}
+
+.story-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6rem;
+}
+
+.story-heading h2 {
+  max-width: 38rem;
+
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.story-heading h2 span {
+  color: #c01221;
+}
+
+.story-body {
+  max-width: 34rem;
+}
+
+.story-body p,
+.story-text p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(0, 47, 73, 0.7);
+}
+
+.story-body .story-lead {
+  margin-bottom: 2rem;
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+
+  color: #002f49;
+}
+
+.story-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   INTRO QUOTE
+========================= */
+
+.story-intro {
+  padding-top: 3rem;
+}
+
+.story-intro blockquote {
+  max-width: 65rem;
+
+  margin: 6rem auto 0;
+  padding-top: 2rem;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.story-intro blockquote span {
+  color: #c01221;
+}
+
+/* =========================
+   SVNIRTAR IMAGE
+========================= */
+
+.story-svnirtar {
+  padding-top: 2rem;
+}
+
+.story-image-medium {
+  width: 70%;
+
+  margin: 5rem 0 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background: #669bbb;
+}
+
+.story-image-medium img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+/* =========================
+   KHUSI
+========================= */
+
+.story-khusi {
+  padding-top: 7rem;
+}
+
+.khusi-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 6rem;
+
+  align-items: start;
+}
+
+.khusi-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+
+  background: #669bbb;
+}
+
+.khusi-image img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+.khusi-content {
+  padding-top: 1rem;
+}
+
+.khusi-content h2 {
+  margin: 0 0 2.5rem;
+
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.07em;
+}
+
+.khusi-content h2 span {
+  color: #c01221;
+}
+
+.khusi-content > p {
+  max-width: 38rem;
+
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(0, 47, 73, 0.7);
+}
+
+.khusi-content > .story-lead {
+  font-size: 1.25rem;
+  line-height: 1.5;
+
+  color: #002f49;
+}
+
+.khusi-note {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+  border-bottom: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.khusi-note span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+
+  color: #780001;
+}
+
+.khusi-note p {
+  max-width: 38rem;
+
+  margin: 0;
+
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+/* =========================
+   QUESTION SECTION
+========================= */
+
+.question-section {
+  width: 100%;
+
+  padding: 7rem 3rem;
+
+  background: #f7f7f5;
+}
+
+.question-label {
+  width: min(100%, 94rem);
+
+  margin: 0 auto 4rem;
+}
+
+.question-label span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  color: #780001;
+}
+
+.question-content {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 5rem 1fr;
+
+  gap: 3rem;
+
+  align-items: center;
+}
+
+.question-old,
+.question-new {
+  padding: 2rem 0;
+}
+
+.question-old {
+  opacity: 0.55;
+}
+
+.question-old span,
+.question-new span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.question-old span {
+  color: #669bbb;
+}
+
+.question-new span {
+  color: #c01221;
+}
+
+.question-old h2,
+.question-new h2 {
+  max-width: 30rem;
+
+  margin: 0;
+
+  font-size: clamp(2.8rem, 4.5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.question-new h2 {
+  color: #002f49;
+}
+
+.question-arrow {
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+  border-radius: 50%;
+
+  color: #c01221;
+
+  font-size: 1.2rem;
+}
+
+/* =========================
+   TURNING POINT
+========================= */
+
+.turning-point {
+  width: 100%;
+
+  padding: 7rem 3rem;
+
+  background: #002f49;
+  color: #fef0d5;
+}
+
+.turning-point-inner {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+}
+
+.turning-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(254, 240, 213, 0.2);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.turning-meta span:first-child {
+  color: #c01221;
+}
+
+.turning-meta span:last-child {
+  color: #669bbb;
+}
+
+.turning-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 6rem;
+
+  padding: 5rem 0;
+}
+
+.turning-content h2 {
+  margin: 0;
+
+  font-size: clamp(4rem, 7vw, 7rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+}
+
+.turning-content h2 span {
+  color: #c01221;
+}
+
+.turning-text {
+  max-width: 32rem;
+}
+
+.turning-text p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(254, 240, 213, 0.68);
+}
+
+.turning-question {
+  max-width: 70rem;
+
+  padding: 2rem 0;
+
+  border-top: 1px solid rgba(254, 240, 213, 0.2);
+}
+
+.turning-question span {
+  display: block;
+
+  margin-bottom: 1.2rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+
+  color: #669bbb;
+}
+
+.turning-question p {
+  max-width: 65rem;
+
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+/* =========================
+   SAFETY STORY
+========================= */
+
+.safety-story {
+  padding-bottom: 5rem;
+}
+
+.safety-principle {
+  margin-top: 6rem;
+  padding: 2.5rem 0;
+
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+  border-bottom: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.safety-principle span {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+
+  color: #780001;
+}
+
+.safety-principle h3 {
+  max-width: 60rem;
+
+  margin: 0 0 1.2rem;
+
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.safety-principle p {
+  max-width: 30rem;
+
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.6);
+}
+
+/* =========================
+   ENGINEERING
+========================= */
+
+.engineering-section {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 7rem 3rem;
+}
+
+.engineering-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 6rem;
+
+  margin-bottom: 5rem;
+}
+
+.engineering-heading h2 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.engineering-heading h2 span {
+  color: #c01221;
+}
+
+.engineering-heading > p {
+  max-width: 30rem;
+
+  margin: 0;
+
+  align-self: end;
+
+  font-size: 1rem;
+  line-height: 1.6;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+.engineering-list {
+  border-top: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.engineering-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+
+  gap: 1rem;
+
+  padding: 1.5rem 0;
+
+  border-bottom: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.engineering-item > span {
+  padding-top: 0.3rem;
+
+  color: #c01221;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.engineering-item h3 {
+  margin: 0 0 0.4rem;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.engineering-item p {
+  max-width: 35rem;
+
+  margin: 0;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.6);
+}
+
+/* =========================
+   CARE
+========================= */
+
+.care-section {
+  width: 100%;
+
+  padding: 7rem 3rem;
+
+  background: #f7f7f5;
+}
+
+.care-heading,
+.care-content {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+}
+
+.care-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6rem;
+
+  padding-bottom: 5rem;
+
+  border-bottom: 1px solid rgba(0, 47, 73, 0.2);
+}
+
+.care-heading > span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #780001;
+}
+
+.care-heading h2 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.care-heading h2 span {
+  color: #c01221;
+}
+
+.care-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 3rem 6rem;
+
+  padding-top: 4rem;
+}
+
+.care-content p {
+  max-width: 32rem;
+
+  margin: 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+/* =========================
+   LESSON
+========================= */
+
+.lesson-section {
+  width: min(100%, 100rem);
+
+  margin: 0 auto;
+
+  padding: 7rem 3rem;
+}
+
+.lesson-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6rem;
+}
+
+.lesson-heading h2 {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+}
+
+.lesson-heading h2 span {
+  color: #c01221;
+}
+
+.lesson-text {
+  max-width: 35rem;
+}
+
+.lesson-text p {
+  margin: 0 0 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: rgba(0, 47, 73, 0.68);
+}
+
+.lesson-text .story-lead {
+  font-size: 1.25rem;
+  line-height: 1.5;
+
+  color: #002f49;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.story-closing {
+  width: 100%;
+
+  padding: 9rem 3rem;
+
+  background: #002f49;
+  color: #fef0d5;
+
+  text-align: center;
+}
+
+.closing-label {
+  margin-bottom: 2rem;
+
+  color: #669bbb;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+
+.story-closing h2 {
+  margin: 0;
+
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: -0.07em;
+}
+
+.story-closing h2 span {
+  color: #c01221;
+}
+
+.story-closing > p {
+  margin: 2rem 0 0;
+
+  font-size: 1.1rem;
+  color: rgba(254, 240, 213, 0.65);
+}
+
+/* =========================
+   STORY NAVIGATION
+========================= */
+
+.story-navigation {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+
+  padding: 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.story-navigation a {
+  color: #002f49;
+  text-decoration: none;
+}
+
+.story-nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.story-nav-back i {
+  transition: transform 0.3s ease;
+}
+
+.story-nav-back:hover i {
+  transform: translateX(-4px);
+}
+
+.story-nav-next {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  text-align: right;
+}
+
+.story-nav-next div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.story-nav-next span {
+  color: #780001;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.story-nav-next strong {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.story-nav-next i {
+  width: 2.8rem;
+  height: 2.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(0, 47, 73, 0.2);
+  border-radius: 50%;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.story-nav-next:hover i {
+  background: #002f49;
+  color: #fef0d5;
+  transform: translateX(4px);
+}
+
+/* =========================
+   EDITORIAL NOTE
+========================= */
+
+.editorial-note {
+  width: min(100%, 94rem);
+
+  margin: 0 auto;
+
+  padding: 0 0 3rem;
+
+  font-size: 0.7rem;
+  line-height: 1.5;
+
+  color: rgba(0, 47, 73, 0.45);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .article-back {
+    padding: 1.5rem 2.5rem 0;
+  }
+
+  .inspiration-hero {
+    padding: 3.5rem 2.5rem 5rem;
+  }
+
+  .hero-heading {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    padding: 3.5rem 0;
+  }
+
+  .hero-heading p {
+    max-width: 30rem;
+  }
+
+  .story-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .story-two-column,
+  .khusi-layout,
+  .turning-content,
+  .engineering-heading,
+  .care-heading,
+  .lesson-layout {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .story-image-medium {
+    width: 85%;
+
+    margin-top: 3.5rem;
+  }
+
+  .question-content {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .question-arrow {
+    transform: rotate(90deg);
+  }
+
+  .engineering-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .care-content {
+    grid-template-columns: 1fr;
+  }
+
+  .turning-point {
+    padding: 5rem 2.5rem;
+  }
+
+  .care-section {
+    padding: 5rem 2.5rem;
+  }
+
+  .story-closing {
+    padding: 7rem 2.5rem;
+  }
+
+  .story-navigation {
+    padding: 2.5rem;
+  }
+
+  .editorial-note {
+    padding: 0 2.5rem 2.5rem;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .article-back {
+    padding: 1.5rem 2rem 0;
+  }
+
+  .inspiration-hero {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .hero-meta {
+    font-size: 0.68rem;
+  }
+
+  .hero-heading {
+    gap: 2rem;
+
+    padding: 3rem 0;
+  }
+
+  .hero-heading h1 {
+    font-size: clamp(3.6rem, 16vw, 5.5rem);
+    line-height: 0.86;
+  }
+
+  .hero-heading p {
+    max-width: 100%;
+
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    border-radius: 0.9rem;
+  }
+
+  .story-section {
+    padding: 4rem 2rem;
+  }
+
+  .story-index {
+    margin-bottom: 2.5rem;
+
+    font-size: 0.68rem;
+  }
+
+  .story-two-column,
+  .khusi-layout,
+  .turning-content,
+  .engineering-heading,
+  .care-heading,
+  .lesson-layout {
+    gap: 2.5rem;
+  }
+
+  .story-heading h2,
+  .khusi-content h2,
+  .engineering-heading h2,
+  .lesson-heading h2,
+  .care-heading h2 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .story-body .story-lead,
+  .khusi-content > .story-lead,
+  .lesson-text .story-lead {
+    font-size: 1.05rem;
+  }
+
+  .story-body p,
+  .khusi-content > p,
+  .lesson-text p,
+  .care-content p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .story-intro blockquote {
+    margin-top: 4rem;
+
+    font-size: clamp(1.8rem, 9vw, 3rem);
+  }
+
+  .story-image-medium {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+
+  .khusi-image {
+    max-width: 100%;
+  }
+
+  .khusi-note {
+    margin-top: 2rem;
+  }
+
+  .khusi-note p {
+    font-size: 0.95rem;
+  }
+
+  /* Question */
+
+  .question-section {
+    padding: 4rem 2rem;
+  }
+
+  .question-label {
+    margin-bottom: 3rem;
+  }
+
+  .question-content {
+    gap: 1.5rem;
+  }
+
+  .question-old h2,
+  .question-new h2 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .question-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  /* Turning point */
+
+  .turning-point {
+    padding: 4rem 2rem;
+  }
+
+  .turning-meta {
+    font-size: 0.68rem;
+  }
+
+  .turning-content {
+    padding: 3.5rem 0;
+  }
+
+  .turning-content h2 {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+  }
+
+  .turning-text p {
+    font-size: 0.92rem;
+  }
+
+  .turning-question p {
+    font-size: clamp(1.8rem, 9vw, 3rem);
+  }
+
+  /* Safety */
+
+  .safety-principle {
+    margin-top: 4rem;
+  }
+
+  .safety-principle h3 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  /* Engineering */
+
+  .engineering-section {
+    padding: 4rem 2rem;
+  }
+
+  .engineering-heading {
+    margin-bottom: 3rem;
+  }
+
+  .engineering-heading > p {
+    font-size: 0.92rem;
+  }
+
+  .engineering-item {
+    grid-template-columns: 2rem 1fr;
+  }
+
+  .engineering-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .engineering-item p {
+    font-size: 0.85rem;
+  }
+
+  /* Care */
+
+  .care-section {
+    padding: 4rem 2rem;
+  }
+
+  .care-heading {
+    padding-bottom: 3rem;
+  }
+
+  .care-content {
+    gap: 1.5rem;
+
+    padding-top: 3rem;
+  }
+
+  /* Lesson */
+
+  .lesson-section {
+    padding: 4rem 2rem;
+  }
+
+  /* Closing */
+
+  .story-closing {
+    padding: 6rem 2rem;
+  }
+
+  .story-closing h2 {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+  }
+
+  .story-closing > p {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation */
+
+  .story-navigation {
+    padding: 2rem;
+
+    align-items: flex-start;
+  }
+
+  .story-nav-back span {
+    display: none;
+  }
+
+  .story-nav-next {
+    gap: 0.8rem;
+  }
+
+  .story-nav-next strong {
+    font-size: 1rem;
+  }
+
+  .story-nav-next i {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .editorial-note {
+    padding: 0 2rem 2rem;
+
+    font-size: 0.65rem;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .article-back {
+    padding: 1.25rem 1.5rem 0;
+  }
+
+  .inspiration-hero {
+    padding: 2.5rem 1.5rem 3.5rem;
+  }
+
+  .hero-heading h1 {
+    font-size: clamp(3.2rem, 15vw, 4.5rem);
+  }
+
+  .story-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .story-index {
+    margin-bottom: 2rem;
+  }
+
+  .question-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .turning-point {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .engineering-section,
+  .care-section,
+  .lesson-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .story-closing {
+    padding: 5rem 1.5rem;
+  }
+
+  .story-navigation {
+    padding: 1.5rem;
+  }
+
+  .editorial-note {
+    padding: 0 1.5rem 1.5rem;
+  }
+}

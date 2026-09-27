@@ -7,13 +7,13 @@
 
   overflow: hidden;
 
-  padding: 4rem 3rem;
+  padding: 3.5rem 3rem;
   border-radius: 1rem;
 }
 
 .problem-container {
   width: min(100%, 100rem);
-  min-height: calc(100vh - 6.5rem);
+  min-height: calc(100vh - 6rem);
 
   margin: 0 auto;
 
@@ -30,9 +30,9 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  gap: 4rem;
+  gap: 3rem;
 
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .problem-label {
@@ -40,7 +40,7 @@
 
   color: #f0b24b;
 
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   font-weight: 500;
 
   letter-spacing: 0.14em;
@@ -48,16 +48,16 @@
 }
 
 .problem-intro {
-  width: 75%;
+  width: 72%;
 
   p {
     margin: 0;
 
-    font-size: clamp(5rem, 5vw, 7rem);
+    font-size: clamp(3.8rem, 5vw, 6rem);
     font-weight: 400;
 
-    line-height: 0.95;
-    letter-spacing: -0.045em;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
   }
 
   span {
@@ -77,9 +77,9 @@
 
   align-items: center;
 
-  gap: clamp(3rem, 7vw, 8rem);
+  gap: clamp(3rem, 6vw, 6rem);
 
-  padding: 3rem 0;
+  padding: 2.5rem 0;
 }
 
 /* =========================================
@@ -91,24 +91,24 @@
   max-width: 90%;
 
   p {
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.3rem;
 
-    font-size: 1.7rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.6;
 
-    color: rgba(254, 240, 213, 0.878);
+    color: rgba(254, 240, 213, 0.78);
   }
 
   .problem-highlight {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.3rem;
 
     border-top: 1px solid rgba(254, 240, 213, 0.2);
 
     color: #fef0d5;
 
-    font-size: 1.2rem;
-    line-height: 1.55;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -118,7 +118,7 @@
 
 .problem-image {
   width: 100%;
-  height: min(70vh, 720px);
+  height: min(70vh, 620px);
 
   overflow: hidden;
 
@@ -134,6 +134,7 @@
   display: block;
 
   object-fit: cover;
+  object-position: top;
 
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
